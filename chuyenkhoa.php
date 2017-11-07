@@ -28,6 +28,7 @@
 	<link rel="stylesheet" type="text/css" href="css/namkhoa.css">
 	<link rel="stylesheet" type="text/css" href="css/phukhoa.css">
 	<link rel="stylesheet" href="css/style_post.css">
+	<link rel="stylesheet" href="css/style_specialist.css">
 	<script src="js/jquery-3.2.1.min.js"></script>
 
 </head>
@@ -42,8 +43,7 @@
 		<?php include "modules/breadcrumb.php"; ?>
 
 		<div class="clear"></div>
-		<?php include "modules/content_posts.php"; ?>
-
+		<?php include "modules/content_specialist.php"; ?>
 		
 		<div class="clear"></div>
 		<?php include "modules/content7.php"; ?>

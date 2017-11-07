@@ -1,15 +1,14 @@
-.content_posts {
-
+.content_posts p{
+	word-wrap: break-word;
 }
-.content_posts .list_post {
+.list_post {
 	float: left;
 	width: 27%;
 	height: auto;
-
-	overflow: hidden;
-
+	overflow-wrap: break-word;
+	box-sizing: border-box;
 }
-.content_posts .list_post h1 {
+.list_post h1 {
 	background-color: #00a654;
 	color: #fff;
 	padding: 10px;
@@ -17,7 +16,10 @@
 	text-align: center;
 
 }
-.content_posts .list_post ul li {
+.list_post ul.item_posts {
+
+}
+.list_post ul li {
 	width: 100%;
 	border-bottom: 1px solid #eee;
 	padding: 10px;
@@ -25,30 +27,30 @@
 	margin-bottom: 18px;
 	line-height: 18px;
 }
-.content_posts .list_post ul li h3 {
+.list_post ul li h3 {
 	line-height: 18px;
 	padding-bottom: 10px;
 	padding-right: 15px;
 }
-.content_posts .list_post ul li a{
+.list_post ul li a{
 	color: #00a654;
 	word-spacing: -2px;
 	line-height: inherit;
 	word-wrap: break-word;
 }
-.content_posts .list_post ul li img {
+.list_post ul li img {
 	float: left;
 	padding-right: 10px;
 }
-.content_posts .list_post ul li p {
+.list_post ul li p {
 	word-wrap: break-word;
 	font-size: 12px;
 	word-spacing: 0px;
 	text-overflow: ellipsis; 
+	margin-right: 15px;
 }
 .content_posts .cnt_post {
-	width: 69%;
-	margin-left: 20px;
+	width: 70%;
 	float: right;
 }
 .content_posts .cnt_post .title_post {
@@ -56,8 +58,8 @@
 }
 .content_posts .cnt_post .title_post h1 {
 	background-color: rgba(255, 212, 133, 0.35);
-	color: red;
-	padding: 10px 5px;
+	color: #ea0101;
+	padding: 10px 10px;
 }
 .content_posts .cnt_post .title_post span {
 	float: right;
@@ -72,7 +74,7 @@
 .content_posts .cnt_post .description_post p:first-child {
 	text-align: left;
 	padding-bottom: 20px;
-	text-indent: 20px;
+	text-indent: 40px;
 }
 .content_posts .cnt_post .description_post p:last-child {
 	text-align: center;
@@ -96,9 +98,114 @@
 	padding-right: 10px;
 }
 .content_posts .cnt_post .interested ul li:nth-child(2) label {
-	color: red;
+	color: #ea0101;
 	margin-left: 20px;
 }
 .content_posts .cnt_post .caption_cnt {
+	margin-top: 20px;
 	text-align: center;
+	position: relative;
+}
+.content_posts .cnt_post .caption_cnt div:before {
+	right: 31%;
+}
+.content_posts .cnt_post .caption_cnt div:after {
+	left: 30.7%;
+}
+.content_posts .cnt_post .caption_cnt h2 {
+	color: #ea0101;
+}
+.content_posts .cnt_post .caption_cnt p {
+	text-align: left;
+}
+.content_posts .cnt_post .cause_sick {
+	margin-top: 20px;
+}
+.content_posts .cnt_post .cause_sick li .title_cause {
+	border-bottom: 1px solid #00a654;
+	margin-bottom: 15px;
+}
+.content_posts .cnt_post .cause_sick li .title_cause img {
+	float: left;
+	padding-right: 10px;
+}
+.content_posts .cnt_post .cause_sick li .title_cause h2 {
+	color: #ea0101;
+}
+.content_posts .cnt_post .cause_sick li .text_cnt p{
+	word-wrap: break-word;
+	margin-bottom: 20px;
+}
+.content_posts .cnt_post .cause_sick li .text_cnt p:first-child {
+	text-indent: 40px;
+}
+.content_posts .cnt_post .hr {
+	background-color: #bdbdbd;
+	height: 1px;
+	width: 50%;
+	margin: 0 auto;
+}
+.content_posts .cnt_post .ratings {
+	margin-top: 20px;
+}
+.content_posts .cnt_post .ratings p {
+	text-indent: 20px;
+}
+.content_posts .cnt_post .standpoint {
+	margin-left: 15%;
+	margin-top: 20px;
+}
+.content_posts .cnt_post .standpoint img {
+	float: left;
+	width: 13%;
+	height: auto;
+}
+.content_posts .cnt_post .standpoint div {
+	background-color: #ffc107;
+	color: #fff;
+	padding: 10px;
+	width: 65%;
+	margin-left: 5.5em;
+}
+.content_posts .cnt_post .standpoint p{
+	text-transform: uppercase;
+}
+.content_posts .cnt_post .standpoint p:last-child{
+	text-indent: 50px;
+}
+.content_posts .cnt_post .comment {
+	margin-top: 20px;
+}
+.content_posts .cnt_post .comment h1 {
+	border-bottom: 1px solid #bdbdbd;
+	text-align: left;
+}
+.content_posts .cnt_post .comment .box_message {
+	margin-top: 10px;
+}
+.content_posts .cnt_post .comment .box_message img{
+	float: left;
+	padding-right: 10px;
+}
+.content_posts .cnt_post .comment .box_message textarea {
+	width: 90%;
+}
+.content_posts .hostpital {
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+.content_posts .hostpital .title_hostpital {
+	margin-bottom: 10px;
+}
+.content_posts .hostpital .title_hostpital img {
+	float: left;
+	padding-left: 5px;
+}
+.content_posts .hostpital .title_hostpital h1 {
+	color: #ffc107;
+}
+.content_posts .hostpital .img_hostpital img{
+	border: 2px solid #bdbdbd;
+	border-radius: 3px;
 }

@@ -33,6 +33,7 @@
 				<i>lượt xem: 99</i>
 			</span>
 		</div>
+		<div class='clear'></div>
 		<div class="description_post">
 			<p>
 				aaaa aaaa aaa aaaa aaaaa aa aaa aaa aaaa aaaa aaa aaa aaaa aa aaa aaa aa aaa aa aaa aa aa aa aa aa aaaa aaaa aaaa aaa aaaa aaaaa aa aaa aaa aaaa aaaa aaa aaa aaaa aa aaa aaa aa aaa aa aaa aa aa aa aa aa aaaa
@@ -40,6 +41,7 @@
 			<img src="images/ld_banner.png" alt="">
 			<p>Bệnh kiệt dương và những điều cân biết</p>
 		</div>
+		<div class='clear'></div>
 		<div class="interested">
 			<ul>
 				<li>
@@ -53,15 +55,18 @@
 				<li>>> Triệu chứng xuất tính sớm</li>
 			</ul>
 		</div>
+		<div class="clear"></div>
 		<div class="caption_cnt">
-			<h2>BỆNH LIỆT DƯƠNG</h2>
-			<img src="images/bg_titlemain.png" alt="">
-			<p>Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng.</p>
+			<div class="title_main">
+				<h2>BỆNH LIỆT DƯƠNG</h2>
+			</div>
+			<p>Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng...</p>
 		</div>
+		<div class="clear"></div>
 		<div class="cause_sick">
 			<ul>
 				<li>
-					<div>
+					<div class="title_cause">
 						<img src="images/heart.png" alt="Quan tâm">
 						<h2>Nguyên nhân gây bệnh liệt dương</h2>
 					</div>
@@ -78,7 +83,7 @@
 					</div>
 				</li>
 				<li>
-					<div>
+					<div class="title_cause">
 						<img src="images/heart.png" alt="Quan tâm">
 						<h2>Nguyên nhân gây bệnh liệt dương</h2>
 					</div>
@@ -95,7 +100,7 @@
 					</div>
 				</li>
 				<li>
-					<div>
+					<div class="title_cause">
 						<img src="images/heart.png" alt="Quan tâm">
 						<h2>Nguyên nhân gây bệnh liệt dương</h2>
 					</div>
@@ -113,6 +118,8 @@
 				</li>
 			</ul>
 		</div>
+		<div class="clear"></div>
+		<div class="hr"></div>
 		<div class="ratings">
 			<div class="rating_stars">
 				<input type="radio" name="example" class="rating" value="1" />
@@ -129,36 +136,30 @@
 			<p>Bệnh liệt dương: Nguyên nhân, triệu chứng cách chữa trị</p>
 			<p>Điểm trung bình: <b>4.6 </b>/ 5 lượt đánh giá</p>
 		</div>
-		<div class="standpoint">
-			<img src="images/icon_meseger.png" alt="">
-			<div>
-				<p>"ĐỪNG NGẰN NGẠI</p>
-				<p>HÃY BÀY TỎ QUAN ĐIỂM VỚI CHÚNG TÔI</p>
-			</div>
-		</div>
-		<div class="comment">
-			<h1>0 comment</h1>
-			<div class="box_message">
-				<img src="images/profile.png" alt="">
-				<textarea name="" id="" cols="100" rows="3"></textarea>
-			</div>
-		</div>
-		<div class="clear"></div>
-		<div class="hostpital">
-			<div class="title_hostpital">
-				<img src="images/photo.png" alt="">
-				<h1>MÔI TRƯỜNG PHÒNG KHÁM TIÊN TIẾN</h1>
-			</div>
-			<img src="images/hostpital1.png" alt="bệnh viện">
-			<img src="images/hostpital1.png" alt="bệnh viện">
-			<img src="images/hostpital1.png" alt="bệnh viện">
-			<img src="images/hostpital1.png" alt="bệnh viện">
-		</div>
 		<script src="js/rating.js"></script>
 		<script>
 			$('.rating_stars').rating(function(vote, event){
 			});
 		</script>
+		<div class="clear"></div>
+		<div class="standpoint">
+			<img src="images/icon_meseger.png" alt="">
+			<div>
+				<p>"ĐỪNG NGẰN NGẠI</p>
+				<p>HÃY BÀY TỎ QUAN ĐIỂM VỚI CHÚNG TÔI"</p>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="comment">
+			<h1>0 comment</h1>
+			<div class="box_message">
+				<img src="images/profile.png" alt="">
+				<textarea name="" id=""  rows="3"></textarea>
+			</div>
+		</div>
+		<div class="clear"></div>
 	</div>
+	<div class="clear"></div>
+	<?php include "footer-banner.php"; ?>
 </div>
 

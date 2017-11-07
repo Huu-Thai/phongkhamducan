@@ -31,10 +31,9 @@
 
 		<div id="dm1" class="tabblcontent tabblactive hidden kdm11 fadeInUp">
 			<div class="clear20"></div>
-			<div class="ndtableft left">
-							</div><!-- ndtableft -->			
+			<div class="ndtableft left"></div><!-- ndtableft -->			
 			<div class="ndtabright right">
-								
+				
 				<div class="clear"></div>
 			</div>
 			<div class="clear"></div>
@@ -42,9 +41,9 @@
 		<div id="dm2" class="tabblcontent hidden kdm11 fadeInUp" style="">
 			<div class="clear20"></div>
 			<div class="ndtableft left">
-							</div><!-- ndtableft -->			
+			</div><!-- ndtableft -->			
 			<div class="ndtabright right">
-								
+				
 				<div class="clear"></div>
 			</div>
 			<div class="clear"></div>			
@@ -52,9 +51,9 @@
 		<div id="dm3" class="tabblcontent hidden kdm11 fadeInUp" style="">
 			<div class="clear20"></div>
 			<div class="ndtableft left">
-							</div><!-- ndtableft -->			
+			</div><!-- ndtableft -->			
 			<div class="ndtabright right">
-								
+				
 				<div class="clear"></div>
 			</div>
 			<div class="clear"></div>	
@@ -62,9 +61,9 @@
 		<div id="dm4" class="tabblcontent hidden kdm11 fadeInUp" style="">
 			<div class="clear20"></div>
 			<div class="ndtableft left">
-							</div><!-- ndtableft -->			
+			</div><!-- ndtableft -->			
 			<div class="ndtabright right">
-								
+				
 				<div class="clear"></div>
 			</div>
 			<div class="clear"></div>
@@ -72,9 +71,9 @@
 		<div id="dm5" class="tabblcontent hidden kdm11 fadeInUp" style="">
 			<div class="clear20"></div>
 			<div class="ndtableft left">
-							</div><!-- ndtableft -->			
+			</div><!-- ndtableft -->			
 			<div class="ndtabright right">
-								
+				
 				<div class="clear"></div>
 			</div>
 			<div class="clear"></div>
@@ -82,17 +81,17 @@
 
 		<script>
 			function tab_dmk(evt, tabdm) {
-			    var i, tabcontent, tablinks;
-			    tabcontent = document.getElementsByClassName("tabblcontent");
-			    for (i = 0; i < tabcontent.length; i++) {
-			        tabcontent[i].style.display = "none";
-			    }
-			    tablinks = document.getElementsByClassName("tablinks");
-			    for (i = 0; i < tablinks.length; i++) {
-			        tablinks[i].className = tablinks[i].className.replace(" active", "");
-			    }
-			    document.getElementById(tabdm).style.display = "block";
-			    evt.currentTarget.className += " active";
+				var i, tabcontent, tablinks;
+				tabcontent = document.getElementsByClassName("tabblcontent");
+				for (i = 0; i < tabcontent.length; i++) {
+					tabcontent[i].style.display = "none";
+				}
+				tablinks = document.getElementsByClassName("tablinks");
+				for (i = 0; i < tablinks.length; i++) {
+					tablinks[i].className = tablinks[i].className.replace(" active", "");
+				}
+				document.getElementById(tabdm).style.display = "block";
+				evt.currentTarget.className += " active";
 			}
 		</script>
 

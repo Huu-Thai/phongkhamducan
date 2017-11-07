@@ -1,0 +1,50 @@
+.department {
+	box-sizing: border-box;
+
+}
+.department ul {
+	box-sizing: border-box;
+}
+.department li,
+.department ul{
+	padding: 0 !important;
+	margin: 0 !important;
+}
+.tiltle_depart {
+	margin-top: 10px;
+	background-color: #21c942;
+	text-align: left;
+	line-height: 40px;
+	padding: 5px;
+	color: #fff;
+	font-weight: 500;
+}
+.tiltle_depart .item_plus {
+	background: url('../images/menulist_active.png') no-repeat left;
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	float: left
+}
+.tiltle_depart .item_plus:hover > ul{
+	/*display: none;*/
+}
+.tiltle_depart h3 {
+	padding: 0 !important;
+	line-height: 30px !important;
+}
+.department ul {
+	/*display: none;*/
+}
+.department ul li {
+	border-bottom: 1.2px dashed #3b3b3b;
+	padding: 10px 0;
+	margin-bottom: 0;
+}
+.department ul li a {
+	color: #333;
+	margin-left: 20px;
+}
+.department ul li:hover a{
+	color: #21c942;
+}
