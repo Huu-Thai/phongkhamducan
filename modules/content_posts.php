@@ -142,21 +142,9 @@
 			});
 		</script>
 		<div class="clear"></div>
-		<div class="standpoint">
-			<img src="images/icon_meseger.png" alt="">
-			<div>
-				<p>"ĐỪNG NGẰN NGẠI</p>
-				<p>HÃY BÀY TỎ QUAN ĐIỂM VỚI CHÚNG TÔI"</p>
-			</div>
-		</div>
+		<?php include "standpoint.php"; ?>
 		<div class="clear"></div>
-		<div class="comment">
-			<h1>0 comment</h1>
-			<div class="box_message">
-				<img src="images/profile.png" alt="">
-				<textarea name="" id=""  rows="3"></textarea>
-			</div>
-		</div>
+		<?php include "comment.php"; ?>
 		<div class="clear"></div>
 	</div>
 	<div class="clear"></div>

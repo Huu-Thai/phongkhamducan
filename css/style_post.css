@@ -151,43 +151,44 @@
 .content_posts .cnt_post .ratings p {
 	text-indent: 20px;
 }
-.content_posts .cnt_post .standpoint {
+.content_posts .standpoint {
 	margin-left: 15%;
 	margin-top: 20px;
 }
-.content_posts .cnt_post .standpoint img {
+.content_posts .standpoint img {
 	float: left;
 	width: 13%;
 	height: auto;
 }
-.content_posts .cnt_post .standpoint div {
+.content_posts .standpoint div {
+	float: right;
 	background-color: #ffc107;
 	color: #fff;
 	padding: 10px;
 	width: 65%;
-	margin-left: 5.5em;
+	margin-right: 17%;
 }
-.content_posts .cnt_post .standpoint p{
+.content_posts .standpoint p{
 	text-transform: uppercase;
 }
-.content_posts .cnt_post .standpoint p:last-child{
+.content_posts .standpoint p:last-child{
 	text-indent: 50px;
 }
-.content_posts .cnt_post .comment {
+.content_posts .comment {
 	margin-top: 20px;
 }
-.content_posts .cnt_post .comment h1 {
+.content_posts .comment h1 {
 	border-bottom: 1px solid #bdbdbd;
 	text-align: left;
 }
-.content_posts .cnt_post .comment .box_message {
+.content_posts .comment .box_message {
 	margin-top: 10px;
 }
-.content_posts .cnt_post .comment .box_message img{
+.content_posts .comment .box_message img{
 	float: left;
 	padding-right: 10px;
 }
-.content_posts .cnt_post .comment .box_message textarea {
+.content_posts .comment .box_message textarea {
 	width: 90%;
 }
 .content_posts .hostpital {
@@ -200,7 +201,7 @@
 }
 .content_posts .hostpital .title_hostpital img {
 	float: left;
-	padding-left: 5px;
+	padding-right: 5px;
 }
 .content_posts .hostpital .title_hostpital h1 {
 	color: #ffc107;

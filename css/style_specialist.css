@@ -2,49 +2,99 @@
 	box-sizing: border-box;
 
 }
-.edit_list_post ul {
-	box-sizing: border-box;
+.edit_list_post h1 {
+	padding: 15px;
 }
-.edit_list_post li,
-.edit_list_post ul{
-	padding: 0 ;
-	margin: 0 ;
-}
-.tiltle_depart {
+.edit_list_post .title_depart {
+	padding: 0;
 	margin-top: 10px;
-	background-color: #21c942;
 	text-align: left;
 	line-height: 40px;
-	padding: 5px;
 	color: #fff;
-	font-weight: 500;
+
 }
-.tiltle_depart .item_plus {
+.edit_list_post .title_depart .item_plus {
 	background: url('../images/menulist_active.png') no-repeat left;
 	width: 30px;
 	height: 30px;
 	display: inline-block;
 	float: left;
+
 }
-.department li:first-child:hover ul{
-	display: block;
+.edit_list_post .title_depart .bgd_title_sick {
+	background-color: #21c942;
+
+	padding: 10px;
 }
-.tiltle_depart h3 {
-	padding: 0 !important;
-	line-height: 30px !important;
+.edit_list_post .title_depart .bgd_title_sick h3 {
+	line-height: 30px;
+	padding: 0;
+	font-weight: 500;
 }
-.department ul {
-	display: none;
+.edit_list_post .title_depart ul li,
+.edit_list_post .title_depart ul{
+	padding: 0px;
+	margin: 0 ;
 }
-.department ul li {
-	border-bottom: 1.2px dashed #3b3b3b;
+.edit_list_post .title_depart ul li {
 	padding: 10px 0;
-	margin-bottom: 0;
+	border-bottom: 1.2px dashed #333;
 }
-.department ul li a {
+.edit_list_post .title_depart ul li a {
+	margin: 3em;
 	color: #333;
-	margin-left: 35px;
 }
-.department ul li:hover a{
+.edit_list_post .title_depart ul li a:hover {
 	color: #21c942;
+}
+
+.edit_cnt_post .edit_title_post {
+	background-color: rgba(255, 212, 133, 0.35);
+	padding: 10px;
+}
+.edit_cnt_post .edit_title_post img {
+	float: left;
+	padding-right: 5px;
+}
+.edit_cnt_post .edit_title_post h1{
+	color: #ea0101;
+}
+.edit_cnt_post .edit_title_post p {
+	margin: 20px;
+	padding: 10px 10px 20px;
+	background-color: #fff;
+}
+.edit_cnt_post .edit_title_post p u{
+	text-decoration: underline;
+}
+.list_sick_depart {
+	width: 100%;
+	box-sizing: border-box;
+}
+.list_sick_depart .sick_depart {
+	box-sizing: border-box;
+	padding: 10px;
+	width: 100%;
+	border: 1.5px solid #bdbdbd;
+	min-height: 160px;
+}
+.list_sick_depart .sick_depart img {
+	max-width: 27%;
+	float: left;
+	padding-right: 15px;
+}
+.list_sick_depart .sick_depart div h2 {
+	color: #00a654;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.list_sick_depart .sick_depart a {
+	background: #ffc107;
+	padding: 10px;
+	float: right;
+	color: #fff;
+	display: block;
+	border-radius: 5px;
+	font-size: 12px;
 }
