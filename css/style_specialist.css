@@ -1,14 +1,14 @@
-.department {
+.edit_list_post {
 	box-sizing: border-box;
 
 }
-.department ul {
+.edit_list_post ul {
 	box-sizing: border-box;
 }
-.department li,
-.department ul{
-	padding: 0 !important;
-	margin: 0 !important;
+.edit_list_post li,
+.edit_list_post ul{
+	padding: 0 ;
+	margin: 0 ;
 }
 .tiltle_depart {
 	margin-top: 10px;
@@ -24,17 +24,17 @@
 	width: 30px;
 	height: 30px;
 	display: inline-block;
-	float: left
+	float: left;
 }
-.tiltle_depart .item_plus:hover > ul{
-	/*display: none;*/
+.department li:first-child:hover ul{
+	display: block;
 }
 .tiltle_depart h3 {
 	padding: 0 !important;
 	line-height: 30px !important;
 }
 .department ul {
-	/*display: none;*/
+	display: none;
 }
 .department ul li {
 	border-bottom: 1.2px dashed #3b3b3b;
@@ -43,7 +43,7 @@
 }
 .department ul li a {
 	color: #333;
-	margin-left: 20px;
+	margin-left: 35px;
 }
 .department ul li:hover a{
 	color: #21c942;

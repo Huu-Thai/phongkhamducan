@@ -1,5 +1,5 @@
 <div class="w1000 content_posts">
-	<div class="list_post">
+	<div class="list_post edit_list_post">
 		<h1>DANH MỤC BỆNH</h1>
 
 		<ul class="department">
