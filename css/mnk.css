@@ -1,0 +1,82 @@
+* {
+font-family:sans-serif;
+list-style:none;
+text-decoration:none;
+margin:0;
+padding:0;
+}
+
+.nav > li {
+float:left;
+}
+
+.nav li a {
+	background: #00a654;
+	color: #FFF;
+	display: block;
+	/* border: 1px solid; */
+	padding: 10px 5px 10px 5px;
+	text-align: justify;
+}
+
+.nav li .flecha{
+font-size: 9px;
+padding-left: 6px;
+display: none;
+}
+
+.nav li a:not(:last-child) .flecha {
+display: inline;
+}
+
+.nav li a:hover 
+{
+	background:#02ff82;
+	height: 22px;
+}
+
+.nav li {
+position:relative;
+}
+
+.nav li ul {
+display:none;
+position:absolute;
+min-width:150px;
+}
+
+.nav li:hover > ul {
+display:block;
+}
+
+.nav li ul li ul {
+right:-145px;
+top:0;
+z-index: 999;
+}
+.chuin
+{
+	text-transform: uppercase;
+}
+.menutrangchu
+{
+	border-radius: 15px;
+    margin-top: 3px;
+    padding: 0px 10px;
+}
+.menutrangchu a
+{
+    border-radius: 10px;
+    height: 15px !important;
+    background: url(../images/bg_menu_trangchu.png) #f2a50c left no-repeat!important;
+    padding-left: 35px!important;
+    line-height: 1;
+}
+.menutrangchu:hover a
+{
+	background: url(../images/bg_menu_trangchu.png) #f44336 left no-repeat!important;
+}
+.kcmenu
+{
+	margin: 0px 15px;
+}
