@@ -195,21 +195,21 @@
 .content_posts .standpoint p:last-child{
 	text-indent: 50px;
 }
-.content_posts .comment {
+.comment {
 	margin-top: 20px;
 }
-.content_posts .comment h1 {
+.comment h1 {
 	border-bottom: 1px solid #bdbdbd;
 	text-align: left;
 }
-.content_posts .comment .box_message {
+.comment .box_message {
 	margin-top: 10px;
 }
-.content_posts .comment .box_message img{
+.comment .box_message img{
 	float: left;
 	padding-right: 10px;
 }
-.content_posts .comment .box_message textarea {
+.comment .box_message textarea {
 	width: 90%;
 }
 .content_posts .hostpital {

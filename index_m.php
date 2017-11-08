@@ -21,41 +21,32 @@
 	<meta name='twitter:site' content='@phongkhamducan' />
 	<meta name='twitter:creator' content='@phongkhamducan' />
 	<link rel="stylesheet" type="text/css" href="css_m/style.css">
-	<!-- <link rel="stylesheet" type="text/css" href="css/stylek_k.css"> -->
-	<!-- <link rel="stylesheet" type="text/css" href="css/stylelist.css">
-	<link rel="stylesheet" type="text/css" href="css/styletrong.css">
-	<link rel="stylesheet" type="text/css" href="css/mnk.css">
-	<link rel="stylesheet" type="text/css" href="css/namkhoa.css">
-	<link rel="stylesheet" type="text/css" href="css/phukhoa.css">
- -->
+	<!-- <script src="js/jquery-3.2.1.js"></script> -->
+
 </head>
 <body>
 	<div id="wrapper" class="w1350">
-		<?php include "modules/header.php"; ?>
+		<?php include "modules_m/header.php"; ?>
 		<div class="clear"></div>
-		<div class="slide">
-			<img src="upload/slide.png" title="Hình slide" alt="Hình slide">
-		</div>
-		<div class="clear"></div>
-		<?php include "modules/content1.php"; ?>
+		<?php include "modules_m/content1.php"; ?>
 
 		<div class="clear20"></div>
-		<?php include "modules/content2.php"; ?>
+		<?php include "modules_m/content2.php"; ?>
 		<div class="clear20"></div>
-		<?php include "modules/content3.php"; ?>
+		<?php include "modules_m/content3.php"; ?>
 		<div class="clear20"></div>
-		<?php include "modules/banner.php"; ?>
+		<?php include "modules_m/banner.php"; ?>
 		<div class="clear"></div>
-		<?php include "modules/content4.php"; ?>
+		<?php include "modules_m/content4.php"; ?>
 		<div class="clear"></div>
-		<?php include "modules/content5.php"; ?>
+		<?php include "modules_m/content5.php"; ?>
 		<div class="clear20"></div>
-		<?php include "modules/content6.php"; ?>
+		<?php include "modules_m/content6.php"; ?>
 		<div class="clear"></div>
-		<?php include "modules/content7.php"; ?>
+		<?php include "modules_m/content7.php"; ?>
 
 		<div class="clear"></div>
-		<?php include "modules/footer.php"; ?>
+		<?php include "modules_m/footer.php"; ?>
 	</div>
 </body>
 </html>

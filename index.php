@@ -27,6 +27,7 @@
 	<link rel="stylesheet" type="text/css" href="css/mnk.css">
 	<link rel="stylesheet" type="text/css" href="css/namkhoa.css">
 	<link rel="stylesheet" type="text/css" href="css/phukhoa.css">
+	<link rel="stylesheet" type="text/css" href="css/style_post.css">
 	<script src="js/jquery-3.2.1.min.js"></script>
 
 </head>
