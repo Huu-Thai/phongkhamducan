@@ -50,7 +50,9 @@
 					<h2>Bệnh liệt dương: Nguyên nhân, triệu chứng và cách chữa tri...</h2>
 					<p>Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng</p>
 				</div>
-				<a href="javascript:void(0)">Xem chi tiết...</a>
+				<div class="hu_xemthem">
+					<a href="javascript:void(0)">Xem chi tiết...</a>
+				</div>
 			</div>
 			<div class="clear20"></div>
 			<div class="sick_depart">
@@ -59,7 +61,9 @@
 					<h2>Bệnh liệt dương: Nguyên nhân, triệu chứng và cách chữa tri...</h2>
 					<p>Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng</p>
 				</div>
-				<a href="javascript:void(0)">Xem chi tiết...</a>
+				<div class="hu_xemthem">
+					<a href="javascript:void(0)">Xem chi tiết...</a>
+				</div>
 			</div>
 			<div class="clear20"></div>
 			<div class="sick_depart">
@@ -68,7 +72,9 @@
 					<h2>Bệnh liệt dương: Nguyên nhân, triệu chứng và cách chữa tri...</h2>
 					<p>Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng</p>
 				</div>
-				<a href="javascript:void(0)">Xem chi tiết...</a>
+				<div class="hu_xemthem">
+					<a href="javascript:void(0)">Xem chi tiết...</a>
+				</div>
 			</div>
 			<div class="clear20"></div>
 			<div class="sick_depart">
@@ -77,7 +83,9 @@
 					<h2>Bệnh liệt dương: Nguyên nhân, triệu chứng và cách chữa tri...</h2>
 					<p>Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng</p>
 				</div>
-				<a href="javascript:void(0)">Xem chi tiết...</a>
+				<div class="hu_xemthem">
+					<a href="javascript:void(0)">Xem chi tiết...</a>
+				</div>
 			</div>
 			<div class="clear20"></div>
 			<div class="sick_depart">
@@ -86,7 +94,9 @@
 					<h2>Bệnh liệt dương: Nguyên nhân, triệu chứng và cách chữa tri...</h2>
 					<p>Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng</p>
 				</div>
-				<a href="javascript:void(0)">Xem chi tiết...</a>
+				<div class="hu_xemthem">
+					<a href="javascript:void(0)">Xem chi tiết...</a>
+				</div>
 			</div>
 			<div class="clear20"></div>
 			<div class="sick_depart">
@@ -95,10 +105,14 @@
 					<h2>Bệnh liệt dương: Nguyên nhân, triệu chứng và cách chữa tri...</h2>
 					<p>Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng</p>
 				</div>
-				<a href="javascript:void(0)">Xem chi tiết...</a>
+				
+				<div class="hu_xemthem">
+					<a href="javascript:void(0)">Xem chi tiết...</a>
+				</div>
+				
+				
 			</div>
 		</div>
-		
 	</div>
 	<div class="clear20"></div>
 	<?php include "standpoint.php"; ?>
@@ -109,14 +123,14 @@
 </div>
 <style type="text/css">
 	.edit_standpoint {
-		margin: 0 !important;
+		/*margin: 0 !important;*/
 	}
 	.edit_standpoint img{
-		width: 10% !important;
-		min-width: 8%;
+		/*width: 10% !important;*/
+		/*min-width: 8%;*/
 	}
 	.edit_standpoint div {
-		margin-right: 21.5% !important;
+		/*margin-right: 21.5% !important;*/
 	}
 </style>
 

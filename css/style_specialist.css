@@ -92,9 +92,41 @@
 .list_sick_depart .sick_depart a {
 	background: #ffc107;
 	padding: 10px;
-	float: right;
 	color: #fff;
 	display: block;
 	border-radius: 5px;
 	font-size: 12px;
+}
+.hu_xemthem {
+	float: right;
+	position: relative;
+	overflow: hidden;
+}
+.hu_xemthem:after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100px;
+	height: 100px;
+	background:rgba(255,255,255,0.5);
+	content:'';
+	transition: all 0.6s;
+	-webkit-transition: all 0.6s;
+	-moz-transition: all 0.6s;
+	transition: transform 0.6s;
+	-webkit-transition: -webkit-transform 0.6s;
+	-moz-transition: -moz-transform 0.6s;
+	transform: scale3d(1,2,1) rotate3d(1,0,1,45deg) translate(0,100%);
+	-webkit-transform: scale3d(1,2,1) rotate3d(1,0,1,45deg) translate(0,100%);
+	-moz-transform: scale3d(1,2,1) rotate3d(1,0,1,45deg) translate(0,100%);
+}
+.hu_xemthem:hover:after {
+	transform: scale3d(1,2,1) rotate3d(1,0,1,45deg) translate(0,-100%);
+	-webkit-transform: scale3d(1,2,1) rotate3d(1,0,1,45deg) translate(0,-110%);
+	-moz-transform: scale3d(1,2,1) rotate3d(1,0,1,45deg) translate(0,-110%);
+}
+.wave {
+	width: 100%;
+	margin: 0 auto;	
+	text-align: center;
 }

@@ -20,15 +20,14 @@
 	<meta name='twitter:card' content='summary' />
 	<meta name='twitter:site' content='@phongkhamducan' />
 	<meta name='twitter:creator' content='@phongkhamducan' />
-	<link rel="stylesheet" type="text/css" href="css/stylek.css">
+	<link rel="stylesheet" type="text/css" href="css_m/style.css">
 	<!-- <link rel="stylesheet" type="text/css" href="css/stylek_k.css"> -->
-	<link rel="stylesheet" type="text/css" href="css/stylelist.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/stylelist.css">
 	<link rel="stylesheet" type="text/css" href="css/styletrong.css">
 	<link rel="stylesheet" type="text/css" href="css/mnk.css">
 	<link rel="stylesheet" type="text/css" href="css/namkhoa.css">
 	<link rel="stylesheet" type="text/css" href="css/phukhoa.css">
-	<script src="js/jquery-3.2.1.min.js"></script>
-
+ -->
 </head>
 <body>
 	<div id="wrapper" class="w1350">
@@ -39,8 +38,7 @@
 		</div>
 		<div class="clear"></div>
 		<?php include "modules/content1.php"; ?>
-		<div class="clear20"></div>
-		<?php include "modules/content8.php"; ?>
+
 		<div class="clear20"></div>
 		<?php include "modules/content2.php"; ?>
 		<div class="clear20"></div>
@@ -55,6 +53,7 @@
 		<?php include "modules/content6.php"; ?>
 		<div class="clear"></div>
 		<?php include "modules/content7.php"; ?>
+
 		<div class="clear"></div>
 		<?php include "modules/footer.php"; ?>
 	</div>

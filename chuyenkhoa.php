@@ -44,6 +44,10 @@
 
 		<div class="clear"></div>
 		<?php include "modules/content_specialist.php"; ?>
+
+		<div class="wave">
+			<img src="images/img_song.png" alt="">
+		</div>
 		
 		<div class="clear"></div>
 		<?php include "modules/content7.php"; ?>
