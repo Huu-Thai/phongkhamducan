@@ -21,11 +21,13 @@
 	<meta name='twitter:site' content='@phongkhamducan' />
 	<meta name='twitter:creator' content='@phongkhamducan' />
 	<link rel="stylesheet" type="text/css" href="css_m/style.css">
+	<link rel="stylesheet" type="text/css" href="css_m/header.css">
+	<link rel="stylesheet" type="text/css" href="css_m/banner.css">
 	<!-- <script src="js/jquery-3.2.1.js"></script> -->
 
 </head>
 <body>
-	<div id="wrapper" class="w1350">
+	<div id="wrapper" class="m640">
 		<?php include "modules_m/header.php"; ?>
 		<div class="clear"></div>
 		<?php include "modules_m/content1.php"; ?>
@@ -41,8 +43,16 @@
 		<div class="clear"></div>
 		<?php include "modules_m/content5.php"; ?>
 		<div class="clear20"></div>
-		<?php include "modules_m/content6.php"; ?>
+		<?php include "modules_m/standpoint.php"; ?>
 		<div class="clear"></div>
+		<?php include "modules_m/comment.php"; ?>
+		<div class="clear20"></div>
+		<?php include "modules_m/footer-banner.php"; ?>
+		<div class="clear20"></div>
+		<div class="m640">
+			<img src="images/img_song.png" title="" alt="" style="width: 100%;">
+		</div>
+		<div class="clear20"></div>
 		<?php include "modules_m/content7.php"; ?>
 
 		<div class="clear"></div>

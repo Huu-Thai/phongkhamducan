@@ -121,16 +121,3 @@
 	<div class="clear"></div>
 	<?php include "footer-banner.php"; ?>
 </div>
-<style type="text/css">
-	.edit_standpoint {
-		/*margin: 0 !important;*/
-	}
-	.edit_standpoint img{
-		/*width: 10% !important;*/
-		/*min-width: 8%;*/
-	}
-	.edit_standpoint div {
-		/*margin-right: 21.5% !important;*/
-	}
-</style>
-

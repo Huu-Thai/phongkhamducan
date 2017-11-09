@@ -21,7 +21,7 @@
 	</div><!-- divtop -->
 	<div class="clear"></div>
 	<div class="m640 divtop2">  
-		<div class="left logotop hidden kdm5 tuvana">
+		<div class="left logotop tuvana">
 			<a href="" title="Về Trang Chủ" alt="Về Trang Chủ">
 				<img src="images/logo.png" title="Logo " alt="Logo ">
 			</a>
@@ -70,60 +70,6 @@
 		</div>
 	</div>
 </header>
-<style>
-	.edit_menutop {
-		position: relative;
-	}
-	.menu_button {
-		background: url('images/menu_button.png') no-repeat center;
-		width: 40px;
-		height: 40px;	
-	}
-	.nav{
-		position: absolute;
-		top:42px;
-		left: 0;
-		background: #00a654;
-		width: 30%;
-		display: none;
-	}
-	.nav li{
-		padding: 5px 0;
-		border-bottom: 1px dashed #bdbdbd;
-		/*display: none;*/
-	}
-	.menutrangchu a{
-		height: 25px;
-		background-image: url('images/icon_home_loai.png');
-		background-repeat: no-repeat;
-		display:block;
-		padding-left: 35px!important;
-		line-height: 36px;
-
-	}
-	.nav a{
-		color: #fff;
-		font-weight: 500;
-		padding-left: 20px;
-	}
-	.timkiem {
-		
-	}
-	.box_search {
-		border: none;
-		height: 20px;
-		outline: 0;
-		border-radius: 5px;
-		float: left;
-		margin-top: 10px;
-		margin-right: 5px;
-		padding: 0 5px;
-	}
-	.box_search:hover {
-		outline: 1.5px;
-		outline-color: #02ff82;
-	}
-</style>
 <script>
 	
 	function open_menu(){

@@ -33,11 +33,13 @@
 	}
 	.cnt_post_m p {
 		font-size: 12px;
+		padding: 0 10px;
 	}
 	.cnt_post_m ul{
 		list-style:none;
 		margin:10px 0;
 		width:300px;
+		padding: 0 10px;
 	}
 	.cnt_post_m ul li{
 		font-size:13px;
@@ -55,5 +57,8 @@
 	}
 	.hinhanhphongkham {
 		text-align: center;
+	}
+	.hinhanhphongkham img {
+		width: 77%;
 	}
 </style>

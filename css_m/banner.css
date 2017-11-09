@@ -1,0 +1,16 @@
+.banner img {
+	width: 100%;
+	height: 100%;
+}
+@media only screen and (max-width: 400px) {
+	.banner .text_banner h3{
+		font-size: 1.5em;
+	}
+	.banner .dlk_banner a {
+		font-size: 16px !important;
+	}
+	.banner .dlk_banner {
+		width: 120px;
+		padding: 6px;
+	}
+}
