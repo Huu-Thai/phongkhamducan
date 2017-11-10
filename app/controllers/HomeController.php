@@ -7,6 +7,6 @@ class HomeController extends Controller {
 		$data['menu'] = $loai->getMainMenu();
 
 
-		$this->view('home');
+		$this->view('home',$data);
 	}
 }

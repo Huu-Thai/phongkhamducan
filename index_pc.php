@@ -6,6 +6,7 @@ $models = 'app/model/';
 
 require_once $models."DB.php";
 require_once $models."Loai.php";
+require_once $models."News.php";
 
 require_once $controllers."Controller.php";
 require_once $controllers."HomeController.php";

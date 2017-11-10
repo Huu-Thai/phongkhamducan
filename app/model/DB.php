@@ -16,14 +16,14 @@ abstract class DB {
 			echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
 			exit;
 		}
-		mysqli_query($this->conn, 'SET name "utf8"');
+		mysqli_query($this->conn, 'SET names "utf8"');
 	}
 
 	function getMainMenu(){
 
 		$query = "SELECT `idLoai`, `TieuDe`, `TieuDeKD`, `UrlHinh`, `TomTat`, `Title`, `Des`, `Keyword` 
 				  FROM `loai` 
-				  WHERE Parent = 0
+				  WHERE Parent = 0 AND idLoai >= 78 ORDER BY 'ASC' LIMIT 0, 5
 				 ";
 
 		$result = mysqli_query($this->conn, $query);
