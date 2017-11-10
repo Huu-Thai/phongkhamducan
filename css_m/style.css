@@ -34,7 +34,7 @@ a:hover{color:#2aed78;}
 .clear20{clear:both;height:20px;content:'';}
 .clear30{clear:both;height:30px;content:'';}
 .clear100{clear:both;height:100px;content:'';}
-/*#wrapper {box-sizing:border-box;}*/
+#wrapper {box-sizing:border-box;padding:0 10px;}
 .m640 {
 	max-width: 640px;
 	margin: 0 auto;
@@ -72,7 +72,7 @@ a:hover{color:#2aed78;}
 .xoay img{transition:0.7s;-webkit-transition:0.7s;-moz-transition:0.7s;}
 .xoay_y img{transition:0.7s;-webkit-transition:0.7s;-moz-transition:0.7s;}
 .xoay:hover img{transform:rotate(360deg);-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg);transform:rotate(360deg);}
-.xoay_y:hover img{transform:rotatey(180deg);-ms-transform:rotatey(180deg);-webkit-transform:rotatey(180deg);transform:rotatey(180deg);}
+.xoay_y:hover img{transform:rotateY(180deg);-ms-transform:rotatey(180deg);-webkit-transform:rotatey(180deg);transform:rotatey(180deg);}
 .visit_tk{height:0px;width:0px;overflow:hidden;margin:0;}
 
 .transition_all{transition:all 0.8s;-webkit-transition:all 0.8s;-webkit-transition:all 0.8s;-moz-transition:all 0.8s;}
@@ -85,7 +85,7 @@ a:hover{color:#2aed78;}
 .divtop2 .glv-tv_top{width:25%;min-width:145px;}
 .divtop2 .glv-tv_top span{color:#1a1a1a;text-transform:uppercase;font-size:16px;font-weight:bold;}
 .divtop2 .glv-tv_top .tvtop{font-size:13px;}
-.divtop2 .glv-tv_top p{color:red;font-size:16px;font-weight:bold;}
+.divtop2 .glv-tv_top p{color:red;font-size:14px;font-weight:bold;}
 .menutop{width:100%;height:42px;background:#00a654;}
 
 .slide{width:100%;}

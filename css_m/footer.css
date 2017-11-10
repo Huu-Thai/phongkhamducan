@@ -1,0 +1,18 @@
+.txt_act {
+	box-sizing: border-box;
+	padding-left: 10px;
+}
+.formdangky {
+	box-sizing: border-box;
+	padding-left: 10px;
+}
+@media only screen and (max-width: 400px) {
+	.formdangky {
+		clear: left;
+		width: 100%;
+		/*margin-left: 20px !important;*/
+	}
+	.txt_act {
+		width: 100%;
+	}
+}

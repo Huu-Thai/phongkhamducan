@@ -53,18 +53,3 @@
 		Bản Quyền Thuộc Về <span>Phòng Khám Đa Khoa Đức An.</span> No Copyright
 	</div>
 </footer>
-<style>
-	.txt_act {
-		margin-left: 20px;
-	}
-	@media only screen and (max-width: 400px) {
-		.formdangky {
-			clear: left;
-			width: 100%;
-			/*margin-left: 20px !important;*/
-		}
-		.formdangky table {
-			margin-left: 20px;
-		}
-	}
-</style>

@@ -1,0 +1,36 @@
+.cnt_post_m h3{
+	text-align: center;
+	color: #f5ba51;
+	text-transform: uppercase;
+	font-size: 1.5em;
+}
+.cnt_post_m p {
+	font-size: 12px;
+	padding: 0 10px;
+}
+.cnt_post_m ul{
+	list-style:none;
+	margin:10px 0;
+	width:300px;
+	padding: 0 10px;
+}
+.cnt_post_m ul li{
+	font-size:13px;
+	font-weight:bold;
+	color:#000;
+	padding-left:30px;
+	text-transform:uppercase;
+	margin:5px 0px;
+	background:url("images/icon_check.png") left no-repeat;background-position:0px 0px;
+	transition:background-position 0.5s;cursor:pointer;
+}
+.cnt_post_m ul li:hover{
+	background-position:0px -30px;
+	color:#e91e63;
+}
+.hinhanhphongkham {
+	text-align: center;
+}
+.hinhanhphongkham img {
+	width: 77%;
+}

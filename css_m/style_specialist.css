@@ -1,0 +1,147 @@
+.loai_khoa {
+	background:#eee;
+	color:#bdbdbd;
+	padding:5px;
+	clear: both;
+	border-radius: 2px;
+	margin: 10px 10px;
+	display: inline-block;
+	font-weight: 600;
+}
+.loai_khoa:hover{
+	color: #a21111;
+}
+.edit_list_post {
+	box-sizing: border-box;
+}
+.edit_list_post h1 {
+	padding: 15px;
+	background: #00A654;
+	color: #fff;
+}
+.edit_list_post .title_depart {
+	padding: 0;
+	margin-top: 10px;
+	text-align: left;
+	line-height: 40px;
+	color: #fff;
+
+}
+.edit_list_post .title_depart .item_plus {
+	background: url('../images/menulist_active.png') no-repeat left;
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	float: left;
+
+}
+.edit_list_post .title_depart .bgd_title_sick {
+	background-color: #21c942;
+
+	padding: 10px;
+}
+.edit_list_post .title_depart .bgd_title_sick h3 {
+	line-height: 30px;
+	padding: 0;
+	font-weight: 500;
+}
+.edit_list_post .title_depart ul li,
+.edit_list_post .title_depart ul{
+	padding: 0px;
+	margin: 0 ;
+}
+.edit_list_post .title_depart ul li {
+	padding: 10px 0;
+	border-bottom: 1.2px dashed #333;
+}
+.edit_list_post .title_depart ul li a {
+	margin: 3em;
+	color: #333;
+}
+.edit_list_post .title_depart ul li a:hover {
+	color: #21c942;
+}
+
+.edit_cnt_post .edit_title_post {
+	background-color: rgba(255, 212, 133, 0.35);
+	padding: 10px;
+}
+.edit_cnt_post .edit_title_post img {
+	float: left;
+	padding-right: 5px;
+}
+.edit_cnt_post .edit_title_post h1{
+	color: #ea0101;
+}
+.edit_cnt_post .edit_title_post p {
+	margin: 20px;
+	padding: 10px 10px 20px;
+	background-color: #fff;
+}
+.edit_cnt_post .edit_title_post p u{
+	text-decoration: underline;
+}
+.list_sick_depart {
+	width: 100%;
+	box-sizing: border-box;
+}
+.list_sick_depart .sick_depart {
+	box-sizing: border-box;
+	padding: 10px;
+	width: 100%;
+	border: 1.5px solid #bdbdbd;
+	min-height: 160px;
+	background:#FEF6E6;
+}
+.list_sick_depart .sick_depart img {
+	max-width: 27%;
+	float: left;
+	padding-right: 15px;
+}
+.list_sick_depart .sick_depart div h2 {
+	color: #00a654;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.list_sick_depart .sick_depart a {
+	background: #ffc107;
+	padding: 5px;
+	color: #fff;
+	display: block;
+	border-radius: 5px;
+	font-size: 12px;
+}
+.hu_xemthem {
+	float: right;
+	position: relative;
+	overflow: hidden;
+}
+.hu_xemthem:after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100px;
+	height: 100px;
+	background:rgba(255,255,255,0.5);
+	content:'';
+	transition: all 0.6s;
+	-webkit-transition: all 0.6s;
+	-moz-transition: all 0.6s;
+	transition: transform 0.6s;
+	-webkit-transition: -webkit-transform 0.6s;
+	-moz-transition: -moz-transform 0.6s;
+	transform: scale3d(1,2,1) rotate3d(1,0,1,45deg) translate(0,100%);
+	-webkit-transform: scale3d(1,2,1) rotate3d(1,0,1,45deg) translate(0,100%);
+	-moz-transform: scale3d(1,2,1) rotate3d(1,0,1,45deg) translate(0,100%);
+}
+.hu_xemthem:hover:after {
+	transform: scale3d(1,2,1) rotate3d(1,0,1,45deg) translate(0,-100%);
+	-webkit-transform: scale3d(1,2,1) rotate3d(1,0,1,45deg) translate(0,-110%);
+	-moz-transform: scale3d(1,2,1) rotate3d(1,0,1,45deg) translate(0,-110%);
+}
+.wave {
+	width: 100%;
+	margin: 0 auto;	
+	text-align: center;
+}

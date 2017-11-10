@@ -60,13 +60,30 @@
 	outline-color: #02ff82;
 }
 @media only screen and (max-width: 400px) {
-	.divtop2 .logotop {
-			/*width: 100% !important;
-			text-align: center;*/
-		}
+	.divtop2 .glv-tv_top p{
+		font-size: 11px;
 	}
-	@media only screen and (max-width: 300px){
-		.divtop2 .glv-tv_top p{
-			font-size: 13px;
-		}
+	.divtop2 .glv-tv_top .tvtop {
+		font-size: 11px;
 	}
+	.divtop2 .glv-tv_top span{
+		font-size: 13px;
+	}
+	.divtop2 .glv-tv_top {
+		min-width: 145px !important;
+	}
+}
+@media only screen and (max-width: 320px){
+	.divtop2 .glv-tv_top p{
+		font-size: 11px;
+	}
+	.divtop2 .glv-tv_top .tvtop {
+		font-size: 11px;
+	}
+	.divtop2 .glv-tv_top span{
+		font-size: 13px;
+	}
+	.divtop2 .glv-tv_top {
+		min-width: 130px !important;
+	}
+}

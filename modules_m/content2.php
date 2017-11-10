@@ -50,26 +50,4 @@
 		<div class="clear"></div>
 	</div>
 </div>
-<style>
-	.edit_box .edit_nd{
-		box-sizing: border-box;
-		margin-top: 10px;
-	}
-	.edit_box .edit_nd:nth-child(even){
-		margin-right:0;
-	}
-	@media only screen and (max-width: 640px) {
-		.edit_box .edit_nd h3{
-			font-size: 12px !important;
-		}
-		.edit_box .edit_nd p{
-			font-size: 11px !important;
-			margin-top: 0 !important;
-		}
-	}
-	@media only screen and (max-width: 400px) {
-		.edit_box .edit_nd {
-			width: 100% !important;
-		}
-	}
-</style>
+

@@ -1,40 +1,6 @@
-<div class="w1000 content_posts">
-	<div class="list_post edit_list_post">
-		<h1>DANH MỤC BỆNH</h1>
-
-		<ul class="department">
-			<li class="title_depart">
-				<div class="bgd_title_sick">
-					<span class="item_plus"></span>
-					<h3>NAM KHOA</h3>
-				</div>
-
-				<ul>
-					<li>
-						<a href=""><i class="doub_arow">>> </i>Liệt Dương</a>	
-					</li>
-					<li>
-						<a href=""><i class="doub_arow"></i>Liệt Dương</a>	
-					</li>
-					<li>
-						<a href=""><i class="doub_arow"></i>Liệt Dương</a>	
-					</li>
-					<li>
-						<a href=""><i class="doub_arow"></i>Liệt Dương</a>	
-					</li>
-					<li>
-						<a href=""><i class="doub_arow"></i>Liệt Dương</a>	
-					</li>
-					<li>
-						<a href=""><i class="doub_arow"></i>Liệt Dương</a>	
-					</li>
-					<li>
-						<a href=""><i class="doub_arow"></i>Liệt Dương</a>	
-					</li>
-				</ul>
-			</li>
-		</ul>
-	</div>
+<div class="m640 content_posts">
+	<a class="loai_khoa" href=""><span>Nam khoa</span></a>
+	<div class="clear"></div>
 	<div class="cnt_post edit_cnt_post">
 		<div class="edit_title_post">
 			<img src="images/bg_h3_loai.png" alt="">
@@ -114,10 +80,5 @@
 			</div>
 		</div>
 	</div>
-	<div class="clear20"></div>
-	<?php include "standpoint.php"; ?>
-	<div class="clear"></div>
-	<?php include "comment.php"; ?>
-	<div class="clear"></div>
-	<?php include "footer-banner.php"; ?>
 </div>
+

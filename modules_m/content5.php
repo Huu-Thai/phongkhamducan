@@ -31,17 +31,3 @@
 		</div>
 	</div><!-- box -->
 </div>
-<style>
-	.ct .img {
-		width: 100%;
-		text-align: center;
-	}
-	.ct .img img {
-		width: 65%;
-	}
-	@media only screen and (max-width:400px) {
-		.ct .ct2 {
-			font-size: 22px !important;
-		}
-	}
-</style>

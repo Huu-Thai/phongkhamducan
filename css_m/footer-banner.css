@@ -1,0 +1,25 @@
+.hostpital .title_hostpital {
+	margin-bottom: 10px;
+}
+.hostpital .title_hostpital img {
+	float: left;
+	padding-right: 5px;
+}
+.hostpital .title_hostpital h1 {
+	color: #ffc107;
+}
+.hostpital .img_hostpital {
+	width: 100%;
+	box-sizing: border-box;
+	text-align: center;
+}
+.hostpital .img_hostpital img{
+	border: 2px solid #bdbdbd;
+	border-radius: 3px;
+	width: 19%;
+	float: left;
+	margin-right: 2px;
+}
+.hostpital .img_hostpital img:last-child{
+	margin-right: 0;
+}

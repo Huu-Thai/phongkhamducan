@@ -1,0 +1,29 @@
+.box_m {
+	box-sizing: border-box;
+	padding-left: 9%;
+	text-align: center;
+
+}
+.qt_m img {
+	width: 50%;
+}
+@media only screen and (max-width: 640px) {
+	.qt_m h3{
+		font-size: 11px !important;
+	}
+}
+@media only screen and (max-width: 400px) {
+	.qt_m h3{
+		font-size: 9px !important;
+		line-height: 13px;
+	}
+	.title_main h3 {
+		font-size: 12px;
+	}
+	.title_main:before {
+		right: 25.5%;
+	}
+	.title_main:after {
+		left: 24.2%;
+	}
+}

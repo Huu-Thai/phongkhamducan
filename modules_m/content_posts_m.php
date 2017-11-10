@@ -1,30 +1,7 @@
 <link rel="stylesheet" href="css/rating.css">
-<div class="w1000 content_posts">
-	<div class="list_post">
-		<h1>bài Viết Liên Quan</h1>
-		<ul class="item_posts">
-			<li>
-				<h3><a href="">Bệnh liệt dương: nguyên nhân, chiệu chứng, chữa trị</a></h3>
-				<img src="images/lietduong.png" alt="">
-				<p>noi dung tom tac noi dung tom tac noi dung tom tac noi dung tom tac</p>
-			</li>
-			<li>
-				<h3><a href="">Bệnh liệt dương: nguyên nhân, chiệu chứng, chữa trị</a></h3>
-				<img src="images/lietduong.png" alt="">
-				<p>noi dung tom tac noi dung tom tac noi dung tom tac noi dung tom tac</p>
-			</li>
-			<li>
-				<h3><a href="">Bệnh liệt dương: nguyên nhân, chiệu chứng, chữa trị</a></h3>
-				<img src="images/lietduong.png" alt="">
-				<p>noi dung tom tac noi dung tom tac noi dung tom tac noi dung tom tac</p>
-			</li>
-			<li>
-				<h3><a href="">Bệnh liệt dương: nguyên nhân, chiệu chứng, chữa trị</a></h3>
-				<img src="images/lietduong.png" alt="">
-				<p>noi dung tom tac noi dung tom tac noi dung tom tac noi dung tom tac</p>
-			</li>
-		</ul>
-	</div>
+<div class="m640 content_posts">
+	<?php include "modules_m/list_post_m.php"; ?>
+	<div class="clear20	"></div>
 	<div class="cnt_post">
 		<div class="title_post">
 			<h1>Bệnh liệt dương: nguyên nhân, chiệu chứng, chữa trị</h1>
@@ -33,12 +10,12 @@
 				<i>lượt xem: 99</i>
 			</span>
 		</div>
-		<div class='clear'></div>
+		<div class='clear2'></div>
 		<div class="description_post">
 			<p>
 				aaaa aaaa aaa aaaa aaaaa aa aaa aaa aaaa aaaa aaa aaa aaaa aa aaa aaa aa aaa aa aaa aa aa aa aa aa aaaa aaaa aaaa aaa aaaa aaaaa aa aaa aaa aaaa aaaa aaa aaa aaaa aa aaa aaa aa aaa aa aaa aa aa aa aa aa aaaa
 			</p>
-			<img src="images/ld_banner.png" alt="">
+			<img src="images/ld_banner.png" alt="" style="width: 76%">
 			<p>Bệnh kiệt dương và những điều cân biết</p>
 		</div>
 		<div class='clear'></div>
@@ -141,13 +118,6 @@
 			$('.rating_stars').rating(function(vote, event){
 			});
 		</script>
-		<div class="clear"></div>
-		<?php include "standpoint.php"; ?>
-		<div class="clear"></div>
-		<?php include "comment.php"; ?>
-		<div class="clear"></div>
 	</div>
-	<div class="clear"></div>
-	<?php include "footer-banner.php"; ?>
 </div>
 

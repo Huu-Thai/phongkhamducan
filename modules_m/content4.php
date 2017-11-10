@@ -42,25 +42,3 @@
 
 	</div><!-- box -->	
 </div>
-<style>
-	.list_ngang {
-		margin: 0 auto;
-		padding: 0 20px;
-	}
-	.tablinks img {
-		width: 42%;
-	}
-	@media only screen and (max-width:400px) {
-		.tablinks {
-			width: 32% !important;
-			min-height: 75px;
-			padding-bottom: 5px !important;
-		}
-		.tablinks p {
-			font-size: 9px !important;
-		}
-		.list_ngang {
-			padding: 0 10px;
-		}
-	}
-</style>
