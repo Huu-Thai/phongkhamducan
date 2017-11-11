@@ -12,7 +12,7 @@ a:hover{color:#2aed78;}
 ::selection{color:#fff;background:#39b54a;text-shadow:none;}
 .left{float:left}
 .right{float:right}
-.timkiem{height:inherit;line-height:14px;}
+.timkiem{margin-right: 35px;height:inherit;line-height:14px;}
 .clear{clear:both}
 .clear5{clear:both;height:5px}
 .clear10{clear:both;height:10px}
@@ -46,7 +46,7 @@ a:hover{color:#2aed78;}
 .divtop2 .glv-tv_top span{color:#1a1a1a;text-transform:uppercase;font-size:16px;font-weight:bold;}
 .divtop2 .glv-tv_top .tvtop{font-size:13px;}
 .divtop2 .glv-tv_top p{color:red;font-size:16px;font-weight:bold;}
-.menutop{width:100%;height:42px;background:#00a654;}
+.menutop{position:relative;width:100%;height:42px;background:#00a654;}
 .slide{width:100%;}
 .slide img{width:100%;}
 .content1_main{margin-top:20px;}

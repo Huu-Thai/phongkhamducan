@@ -54,17 +54,36 @@
 			<ul class="nav"> 
 				<li class="menutrangchu"> <a href="/" title="Trang Chủ" alt="Trang Chủ" class="chuin">Trang Chủ</a></li>
 				<?php while($row = mysqli_fetch_assoc($data['menu'])): ?>
-				<li class="kcmenu"> <a href="index.php?nameCtr=SingleController&action=showPost&idLoai=<?=$row['idLoai']?>" title="<?=$row['Title']?>" alt="<?=$row['Title']?>" class="chuin"><?=$row['TieuDe'] ?></a></li>
+					<li class="kcmenu"> <a href="index.php?nameCtr=ChuyenkhoaController&action=getPost&idLoai=<?=$row['idLoai']?>" title="<?=$row['Title']?>" alt="<?=$row['Title']?>" class="chuin"><?=$row['TieuDe'] ?></a></li>
 				<?php endwhile; ?>
 				
 				<li class="kcmenu"> <a href="#" title="Liên Hệ" alt="Liên Hệ" class="chuin">Liên Hệ</a></li>
 			</ul>         
 			<div class="timkiem right">
+
 				<a href="#" data-popup-open="popup-1" title="Tìm Kiếm" alt="Tìm Kiếm">
 					<img src="images/icon_search.png" title="Tìm Kiếm" alt="Tìm Kiếm">
-				</a>           
+				</a>      
+				<input type="text" class="box_search" placeholder="search" cols="50">    
 			</div>
 			<div class="clear"></div>
 		</div>
 	</div>
 </header>
+<style>
+	.box_search {
+		position: absolute;
+		top: 8px;
+		right: 25px;
+		border: none;
+		outline: 0;
+		border-radius: 5px;
+		float: left;
+		padding: 0 5px;
+		height: 25px;
+	}
+	.box_search:hover {
+		outline: 1.5px;
+		outline-color: #02ff82;
+	}
+</style>

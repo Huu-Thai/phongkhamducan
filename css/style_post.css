@@ -20,12 +20,15 @@
 
 }
 .list_post ul li {
+	box-sizing: border-box;
 	width: 100%;
 	border-bottom: 1px solid #eee;
 	padding: 10px;
-	padding-bottom: 35px;
+	padding-bottom: 15px;
 	margin-bottom: 18px;
 	line-height: 18px;
+	/*max-height: 200px;*/
+	text-overflow: ellipsis;
 }
 .list_post ul li h3 {
 	line-height: 18px;
@@ -41,8 +44,10 @@
 .list_post ul li img {
 	float: left;
 	padding-right: 10px;
+	max-width: 100px;
 }
 .list_post ul li p {
+	/*max-height: 120px;*/
 	word-wrap: break-word;
 	font-size: 12px;
 	word-spacing: 0px;
@@ -78,6 +83,10 @@
 }
 .content_posts .cnt_post .description_post p:last-child {
 	text-align: center;
+}
+.content_posts .cnt_post .description_post img {
+	max-height: 350px;
+	max-width: 500px;
 }
 .content_posts .cnt_post .interested {
 	margin-top: 20px;
@@ -151,7 +160,7 @@
 .content_posts .cnt_post .ratings p {
 	text-indent: 20px;
 }
-.content_posts .standpoint {
+.standpoint {
 	margin-left: 15%;
 	margin-top: 20px;
 }
@@ -178,10 +187,10 @@
 	-webkit-transform:scale3d(2.2,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,128%,0);
 	transform:scale3d(2.2,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,128%,0);
 }
-.content_posts .standpoint .img_message img {
+.standpoint .img_message img {
 	width: 100%;
 }
-.content_posts .standpoint div:last-child {
+.standpoint div:last-child {
 	float: right;
 	background-color: #ffc107;
 	color: #fff;
@@ -189,10 +198,10 @@
 	width: 65%;
 	margin-right: 17%;
 }
-.content_posts .standpoint p{
+.standpoint p{
 	text-transform: uppercase;
 }
-.content_posts .standpoint p:last-child{
+.standpoint p:last-child{
 	text-indent: 50px;
 }
 .comment {
@@ -212,22 +221,22 @@
 .comment .box_message textarea {
 	width: 90%;
 }
-.content_posts .hostpital {
+.hostpital {
 	width: 100%;
 	margin: 0 auto;
 	margin-top: 20px;
 }
-.content_posts .hostpital .title_hostpital {
+.hostpital .title_hostpital {
 	margin-bottom: 10px;
 }
-.content_posts .hostpital .title_hostpital img {
+.hostpital .title_hostpital img {
 	float: left;
 	padding-right: 5px;
 }
-.content_posts .hostpital .title_hostpital h1 {
+.hostpital .title_hostpital h1 {
 	color: #ffc107;
 }
-.content_posts .hostpital .img_hostpital img{
+.hostpital .img_hostpital img{
 	border: 2px solid #bdbdbd;
 	border-radius: 3px;
 }

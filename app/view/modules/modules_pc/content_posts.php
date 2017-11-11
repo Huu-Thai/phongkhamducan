@@ -1,45 +1,34 @@
+
 <link rel="stylesheet" href="css/rating.css">
 <div class="w1000 content_posts">
 	<div class="list_post">
 		<h1>bài Viết Liên Quan</h1>
 		<ul class="item_posts">
+		<?php //var_dump($data['postRelated']); ?>
+		<?php while($row = mysqli_fetch_assoc($data['postRelated'])): ?>
 			<li>
-				<h3><a href="">Bệnh liệt dương: nguyên nhân, chiệu chứng, chữa trị</a></h3>
-				<img src="images/lietduong.png" alt="">
-				<p>noi dung tom tac noi dung tom tac noi dung tom tac noi dung tom tac</p>
+				<h3><a href="index.php?nameCtr=SingleController&action=showPost&idTT=<?=$row['idTT']?>"><?=$row['TieuDe'] ?></a></h3>
+				<img src="<?=$row['UrlHinh']?>" alt="<?=$row['Title']?>">
+				<?=$row['TomTat'] ?>
 			</li>
-			<li>
-				<h3><a href="">Bệnh liệt dương: nguyên nhân, chiệu chứng, chữa trị</a></h3>
-				<img src="images/lietduong.png" alt="">
-				<p>noi dung tom tac noi dung tom tac noi dung tom tac noi dung tom tac</p>
-			</li>
-			<li>
-				<h3><a href="">Bệnh liệt dương: nguyên nhân, chiệu chứng, chữa trị</a></h3>
-				<img src="images/lietduong.png" alt="">
-				<p>noi dung tom tac noi dung tom tac noi dung tom tac noi dung tom tac</p>
-			</li>
-			<li>
-				<h3><a href="">Bệnh liệt dương: nguyên nhân, chiệu chứng, chữa trị</a></h3>
-				<img src="images/lietduong.png" alt="">
-				<p>noi dung tom tac noi dung tom tac noi dung tom tac noi dung tom tac</p>
-			</li>
+		<?php endwhile; ?>
 		</ul>
 	</div>
 	<div class="cnt_post">
 		<div class="title_post">
-			<h1>Bệnh liệt dương: nguyên nhân, chiệu chứng, chữa trị</h1>
+			<h1><?=$data['news']['TieuDe']; ?></h1>
 			<span>
-				<time>Ngày đăng: 07/11/2017</time>
-				<i>lượt xem: 99</i>
+				<time>Ngày đăng: <?= date('d-m-Y', strtotime($data['news']['NgayDang'])); ?></time>
+				<i>lượt xem: <?=$data['news']['LuotXem']?>></i>
 			</span>
 		</div>
 		<div class='clear'></div>
 		<div class="description_post">
 			<p>
-				aaaa aaaa aaa aaaa aaaaa aa aaa aaa aaaa aaaa aaa aaa aaaa aa aaa aaa aa aaa aa aaa aa aa aa aa aa aaaa aaaa aaaa aaa aaaa aaaaa aa aaa aaa aaaa aaaa aaa aaa aaaa aa aaa aaa aa aaa aa aaa aa aa aa aa aa aaaa
+				<?=$data['news']['Des'] ?>
 			</p>
-			<img src="images/ld_banner.png" alt="">
-			<p>Bệnh kiệt dương và những điều cân biết</p>
+			<img src="<?=$data['news']['UrlHinh']?>" alt="">
+			<p><?=$data['news']['Title']?></p>
 		</div>
 		<div class='clear'></div>
 		<div class="interested">
@@ -48,23 +37,25 @@
 					<img src="images/sq_add.png" alt="">
 					<h3> có thể bạn quan tâm;</h3>
 				</li>
+				<?php while($row = mysqli_fetch_assoc($data['mood'])): ?>
 				<li>
-					<label for="">>> </label><span>Triệu chứng xuất tinh sớm</span>
+					<label for="">>> </label><a href="index.php?nameCtr=SingleController&action=showPost&idTT=<?=$row['idTT']?>" ><?=$row['Title'] ?></a>
 				</li>
-				<li>>> Triệu chứng xuất tính sớm</li>
-				<li>>> Triệu chứng xuất tính sớm</li>
+				<?php endwhile; ?>
+				
 			</ul>
 		</div>
 		<div class="clear"></div>
 		<div class="caption_cnt">
 			<div class="title_main">
-				<h2>BỆNH LIỆT DƯƠNG</h2>
+				<h2><?=$data['news']['Title'] ?></h2>
 			</div>
-			<p>Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng...</p>
+			<!-- <p>Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng...</p> -->
 		</div>
 		<div class="clear"></div>
 		<div class="cause_sick">
-			<ul>
+			<?=$data['news']['NoiDung'] ?>
+			<!-- <ul>
 				<li>
 					<div class="title_cause">
 						<img src="images/heart.png" alt="Quan tâm">
@@ -116,7 +107,7 @@
 						<p>- các chuyên gia phòng khám đa khoa thái hà cho biết: co rât nhiều nguyên nhân dẫn đến bệnh liệt dương điều đó có thể kể đến một số nguyên nhân phổ biến dưới đây</p>
 					</div>
 				</li>
-			</ul>
+			</ul> -->
 		</div>
 		<div class="clear"></div>
 		<div class="hr"></div>

@@ -1,4 +1,4 @@
-<div class="hostpital">
+<div class="hostpital w1000">
 	<div class="title_hostpital">
 		<img src="images/photo.png" alt="">
 		<h1>MÔI TRƯỜNG PHÒNG KHÁM TIÊN TIẾN</h1>

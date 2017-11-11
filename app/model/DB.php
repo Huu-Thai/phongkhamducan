@@ -23,7 +23,7 @@ abstract class DB {
 
 		$query = "SELECT `idLoai`, `TieuDe`, `TieuDeKD`, `UrlHinh`, `TomTat`, `Title`, `Des`, `Keyword` 
 				  FROM `loai` 
-				  WHERE Parent = 0 AND idLoai >= 78 ORDER BY 'ASC' LIMIT 0, 5
+				  WHERE Parent = 0 AND AnHien = 1
 				 ";
 
 		$result = mysqli_query($this->conn, $query);
@@ -32,4 +32,15 @@ abstract class DB {
 		}
 		return false;
 	}
+
+	function findId($id){
+		$query = "SELECT * FROM $this->table WHERE $this->primaryKey = $id";
+// var_dump($query);
+		$result = mysqli_query($this->conn, $query);
+		if(mysqli_num_rows($result) > 0){
+			return mysqli_fetch_assoc($result);
+		}
+		return false;
+	}
+
 }

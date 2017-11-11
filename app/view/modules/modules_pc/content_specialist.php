@@ -6,131 +6,56 @@
 			<li class="title_depart">
 				<div class="bgd_title_sick">
 					<span class="item_plus"></span>
-					<h3>NAM KHOA</h3>
+					<h3><?=$data['loai']['TieuDe']; ?></h3>
 				</div>
 
 				<ul>
-					<li>
-						<a href=""><i class="doub_arow">>> </i>Liệt Dương</a>	
-					</li>
-					<li>
-						<a href=""><i class="doub_arow"></i>Liệt Dương</a>	
-					</li>
-					<li>
-						<a href=""><i class="doub_arow"></i>Liệt Dương</a>	
-					</li>
-					<li>
-						<a href=""><i class="doub_arow"></i>Liệt Dương</a>	
-					</li>
-					<li>
-						<a href=""><i class="doub_arow"></i>Liệt Dương</a>	
-					</li>
-					<li>
-						<a href=""><i class="doub_arow"></i>Liệt Dương</a>	
-					</li>
-					<li>
-						<a href=""><i class="doub_arow"></i>Liệt Dương</a>	
-					</li>
+					<?php while($row = mysqli_fetch_assoc($data['subPosts'])): ?>
+						<li>
+							<a href="index.php?nameCtr=ChuyenkhoaController&action=getPost&idLoai=<?=$row['Parent']?>&childIdLoai=<?=$row['idLoai']?>"><i class="doub_arow">>> </i><?=$row['TieuDe'] ?></a>	
+						</li>
+					<?php endwhile; ?>
 				</ul>
 			</li>
 		</ul>
 	</div>
 	<div class="cnt_post edit_cnt_post">
+
 		<div class="edit_title_post">
 			<img src="images/bg_h3_loai.png" alt="">
-			<h1>Bệnh liệt dương: nguyên nhân, chiệu chứng, chữa trị</h1>
-			<p><u>Bệnh liệt dương</u> là tình trạng dương vật của nam giới không thể cương cứng Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng</p>
+			<h1><?=$data['choseSubPost']['Title'] ?></h1>
+			<p><?=$data['choseSubPost']['Des']; ?></p>
 		</div>
 		<div class='clear30'></div>
 
 		<div class="list_sick_depart">
-			<div class="sick_depart">
-				<img src="images/thumbnail_post.png" alt="">
-				<div>
-					<h2>Bệnh liệt dương: Nguyên nhân, triệu chứng và cách chữa tri...</h2>
-					<p>Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng</p>
+			<?php include "app/view/modules/paginate.php"; ?>
+			
+			<?php for($run = $x; $run < $end; $run++): ?>
+				<div class="clear20"></div>
+				<div class="sick_depart">
+			
+					<img src="<?=$rows[$run]['UrlHinh']?>" alt="<?=$rows[$run]['Title']?>">
+					<div>
+						<h2><?=$rows[$run]['Title']; ?></h2>
+						<p><?=$rows[$run]['TomTat']; ?></p>
+					</div>
+					<div class="hu_xemthem">
+						<a href="index.php?nameCtr=SingleController&action=showPost&idTT=<?=$rows[$run]['idTT']?>" title="<?=$rows[$run]['Title']?>">Xem chi tiết...</a>
+					</div>
 				</div>
-				<div class="hu_xemthem">
-					<a href="javascript:void(0)">Xem chi tiết...</a>
-				</div>
-			</div>
+			<?php endfor; ?>
 			<div class="clear20"></div>
-			<div class="sick_depart">
-				<img src="images/thumbnail_post.png" alt="">
-				<div>
-					<h2>Bệnh liệt dương: Nguyên nhân, triệu chứng và cách chữa tri...</h2>
-					<p>Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng</p>
-				</div>
-				<div class="hu_xemthem">
-					<a href="javascript:void(0)">Xem chi tiết...</a>
-				</div>
-			</div>
-			<div class="clear20"></div>
-			<div class="sick_depart">
-				<img src="images/thumbnail_post.png" alt="">
-				<div>
-					<h2>Bệnh liệt dương: Nguyên nhân, triệu chứng và cách chữa tri...</h2>
-					<p>Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng</p>
-				</div>
-				<div class="hu_xemthem">
-					<a href="javascript:void(0)">Xem chi tiết...</a>
-				</div>
-			</div>
-			<div class="clear20"></div>
-			<div class="sick_depart">
-				<img src="images/thumbnail_post.png" alt="">
-				<div>
-					<h2>Bệnh liệt dương: Nguyên nhân, triệu chứng và cách chữa tri...</h2>
-					<p>Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng</p>
-				</div>
-				<div class="hu_xemthem">
-					<a href="javascript:void(0)">Xem chi tiết...</a>
-				</div>
-			</div>
-			<div class="clear20"></div>
-			<div class="sick_depart">
-				<img src="images/thumbnail_post.png" alt="">
-				<div>
-					<h2>Bệnh liệt dương: Nguyên nhân, triệu chứng và cách chữa tri...</h2>
-					<p>Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng</p>
-				</div>
-				<div class="hu_xemthem">
-					<a href="javascript:void(0)">Xem chi tiết...</a>
-				</div>
-			</div>
-			<div class="clear20"></div>
-			<div class="sick_depart">
-				<img src="images/thumbnail_post.png" alt="">
-				<div>
-					<h2>Bệnh liệt dương: Nguyên nhân, triệu chứng và cách chữa tri...</h2>
-					<p>Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng Bệnh liệt dương là tình trạng dương vật của nam giới không thể cương cứng</p>
-				</div>
-				
-				<div class="hu_xemthem">
-					<a href="javascript:void(0)">Xem chi tiết...</a>
-				</div>
-				
-				
-			</div>
+			<ul class="paginate">
+				<?php for($i = 1;$i <= $numPage; $i++): ?>
+						<li <?php echo ($_GET['pageNum'] == $i) ? 'class="active"' : ""?> ><a href="index.php?nameCtr=ChuyenkhoaController&action=getPost&idLoai=<?=$data['idLoai']?>&pageNum=<?=$i?>">Trang <?=$i ?></a></li>
+				<?php endfor; ?>
+			</ul>
 		</div>
 	</div>
-	<div class="clear20"></div>
-	<?php include "standpoint.php"; ?>
-	<div class="clear"></div>
-	<?php include "comment.php"; ?>
-	<div class="clear"></div>
-	<?php include "footer-banner.php"; ?>
 </div>
-<style type="text/css">
-	.edit_standpoint {
-		/*margin: 0 !important;*/
-	}
-	.edit_standpoint img{
-		/*width: 10% !important;*/
-		/*min-width: 8%;*/
-	}
-	.edit_standpoint div {
-		/*margin-right: 21.5% !important;*/
-	}
-</style>
+<div class="clear20"></div>
+<?php include "footer-banner.php"; ?>
+</div>
+
 

@@ -28,7 +28,9 @@
 	<link rel="stylesheet" type="text/css" href="css/namkhoa.css">
 	<link rel="stylesheet" type="text/css" href="css/phukhoa.css">
 	<link rel="stylesheet" type="text/css" href="css/style_post.css">
-	<script src="js/jquery-3.2.1.min.js"></script>
+	<link rel="stylesheet" href="css/style_specialist.css">
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="ajax/search.js"></script>
 
 </head>
 <body>
@@ -52,5 +54,6 @@
 		<div class="clear"></div>
 		<?php include $this->linkModule."footer.php"; ?>
 	</div>
+
 </body>
 </html>
