@@ -160,6 +160,11 @@
 .content_posts .cnt_post .ratings p {
 	text-indent: 20px;
 }
+.cause_sick p:nth-child(8) img {
+	margin-width: 472px !important;
+	width: 76% !important;
+	height: auto !important;
+}
 .standpoint {
 	margin-left: 15%;
 	margin-top: 20px;
@@ -204,23 +209,6 @@
 .standpoint p:last-child{
 	text-indent: 50px;
 }
-.comment {
-	margin-top: 20px;
-}
-.comment h1 {
-	border-bottom: 1px solid #bdbdbd;
-	text-align: left;
-}
-.comment .box_message {
-	margin-top: 10px;
-}
-.comment .box_message img{
-	float: left;
-	padding-right: 10px;
-}
-.comment .box_message textarea {
-	width: 90%;
-}
 .hostpital {
 	width: 100%;
 	margin: 0 auto;
@@ -239,7 +227,4 @@
 .hostpital .img_hostpital img{
 	border: 2px solid #bdbdbd;
 	border-radius: 3px;
-}
-.img_message {
-
 }

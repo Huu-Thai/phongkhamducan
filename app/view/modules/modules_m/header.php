@@ -52,12 +52,10 @@
 		<div class="m640 edit_menutop"> 
 			<a class="menu_button left" href="javascript:void(0)" onclick="open_menu()" ondblclick="close_menu()"></a>       
 			<ul class="nav"> 
-				<li class="menutrangchu"> <a href="#" title="Trang Chủ" alt="Trang Chủ" class="chuin">Trang Chủ</a></li>
-				<li class="kcmenu"> <a href="#" title="Giới Thiệu" alt="Giới Thiệu" class="chuin">Nam Khoa</a></li>
-				<li class="kcmenu"> <a href="#" title="Giới Thiệu" alt="Giới Thiệu" class="chuin">Phụ Khoa</a></li>
-				<li class="kcmenu"> <a href="#" title="Giới Thiệu" alt="Giới Thiệu" class="chuin">Bệnh Xã Hội</a></li>
-				<li class="kcmenu"> <a href="#" title="Giới Thiệu" alt="Giới Thiệu" class="chuin">Bệnh Trĩ</a></li>
-				<li class="kcmenu"> <a href="#" title="Giới Thiệu" alt="Giới Thiệu" class="chuin">tai Mũi Họng</a></li>
+				<li class="menutrangchu"> <a href="./" title="Trang Chủ" alt="Trang Chủ" class="chuin">Trang Chủ</a></li>
+				<?php while($row = mysqli_fetch_assoc($data['menu'])): ?>
+					<li class="kcmenu"> <a href="index.php?nameCtr=ChuyenkhoaController&action=getPost&idLoai=<?=$row['idLoai']?>" title="<?=$row['Title']?>" alt="<?=$row['Title']?>" class="chuin"><?=$row['TieuDe'] ?></a></li>
+				<?php endwhile; ?>
 				<li class="kcmenu"> <a href="#" title="Liên Hệ" alt="CLiên Hệ" class="chuin">Liên Hệ</a></li>
 			</ul>         
 			<div class="timkiem right">

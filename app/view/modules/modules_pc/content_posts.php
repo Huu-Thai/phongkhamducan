@@ -111,13 +111,9 @@
 		</div>
 		<div class="clear"></div>
 		<div class="hr"></div>
+		<input type="hidden" name="idTT" value="<?=$data['news']['idTT']?>">
 		<div class="ratings">
 			<div class="rating_stars">
-				<input type="radio" name="example" class="rating" value="1" />
-				<input type="radio" name="example" class="rating" value="2" />
-				<input type="radio" name="example" class="rating" value="3" />
-				<input type="radio" name="example" class="rating" value="4" />
-				<input type="radio" name="example" class="rating" value="5" />
 				<input type="radio" name="example" class="rating" value="1" />
 				<input type="radio" name="example" class="rating" value="2" />
 				<input type="radio" name="example" class="rating" value="3" />
@@ -128,10 +124,7 @@
 			<p>Điểm trung bình: <b>4.6 </b>/ 5 lượt đánh giá</p>
 		</div>
 		<script src="js/rating.js"></script>
-		<script>
-			$('.rating_stars').rating(function(vote, event){
-			});
-		</script>
+		<?php echo $data['script']; ?>
 		<div class="clear"></div>
 		<?php include "standpoint.php"; ?>
 		<div class="clear"></div>

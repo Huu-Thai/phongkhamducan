@@ -64,14 +64,14 @@ class News extends DB {
 	
 	function search($keyword){
 
-		$query = "SELECT `idTT`, `idCL`, `idLoai`, `idCon`, `TieuDe`, `TieuDeKD` 
+		$query = "SELECT `idTT`, `idCL`, `idLoai`, `idCon`, `TieuDe`, `TieuDeKD`, `Title`, `Des`, `Keyword`, `TomTat`, `NoiDung`, `UrlHinh`, `NgayDang`, `LuotXem` 
 				FROM $this->table
-				WHERE TieuDe LIKE '%$keyword%'
+				WHERE TieuDe LIKE '%$keyword%' LIMIT 0, 15
 				";
 
 		$result = mysqli_query($this->conn, $query);
 		if(mysqli_num_rows($result)){
-			$array = '';
+			$array = [];
 			while($row = mysqli_fetch_assoc($result)){
 				$array[] = $row;
 			}

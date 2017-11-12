@@ -29,8 +29,9 @@
 	<link rel="stylesheet" type="text/css" href="css/phukhoa.css">
 	<link rel="stylesheet" type="text/css" href="css/style_post.css">
 	<link rel="stylesheet" href="css/style_specialist.css">
+	<link rel="stylesheet" type="text/css" href="css/comment.css">
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="ajax/search.js"></script>
+	
 
 </head>
 <body>
@@ -43,10 +44,10 @@
 		<div class="clear"></div>
 		
 		<?php 
-			if(isset($page) && !empty($page)): 
+		if(isset($page) && !empty($page)): 
 
-				include $this->linkPage.$page.".php";
-			endif;
+			include $this->linkPage.$page.".php";
+		endif;
 		?>
 
 		<div class="clear"></div>
@@ -54,6 +55,16 @@
 		<div class="clear"></div>
 		<?php include $this->linkModule."footer.php"; ?>
 	</div>
+	<script type="text/javascript" src="ajax/search.js"></script>
+	<script type="text/javascript" src="ajax/rating.js"></script>
 
+	<script type="text/javascript">
+		<?php 
+		if(isset($_SESSION['script'])) { 
+			echo $_SESSION['script'] ;
+			unset($_SESSION['script']);
+		}
+		?>
+	</script>
 </body>
 </html>

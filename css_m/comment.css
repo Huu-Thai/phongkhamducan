@@ -1,0 +1,85 @@
+.comment {
+	margin-top: 20px;
+	position: relative;
+}
+.comment h1 {
+	border-bottom: 1px solid #bdbdbd;
+	text-align: left;
+}
+.comment .box_message {
+	margin-top: 10px;
+}
+.comment .box_message img{
+	float: left;
+	padding-right: 10px;
+}
+.comment .box_message textarea {
+	width: 90%;
+}
+.comment .btnSendPar,
+.comment .btnSendChil{
+	padding: 5px;
+	margin-top: 5px;
+	background-color: #476ae8;
+	color: #fff;
+	border-radius:5px;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+.comment .btnSendPar {
+	float: right;
+}
+.comment .btnSendPar:hover,
+.comment .btnSendChil:hover{
+	background: #0d2fa9;
+}
+.comment .show_login {
+	position: absolute;
+	right: 0;
+	top: 5px;
+	font-weight: 600;
+	color: #21aee6;
+}
+.comment .user {
+	position: absolute;
+	right: 0;
+	top: 5px;
+	font-weight: 600;
+	color: #21aee6;
+	text-transform: uppercase;
+}
+.box_show_mess {
+	box-sizing: border-box;
+	border: 1px solid #eee;
+	padding: 10px;
+}
+.box_show_mess .message img{
+	float: left;
+	padding-right: 10px;
+	max-width: 35px;
+}
+.message .right_mess {
+	margin-left: 50px;
+}
+.right_mess h2 {
+	color: #20c5c5;
+}
+.right_mess p {
+	color: #295d0f;
+}
+.message_child {
+	margin-left: 50px;
+	margin-top: 10px;
+}
+.box_rep {
+
+	margin-top: 10px;
+	margin-left: 50px;
+}
+.box_rep textarea {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 5px 10px;
+	border-radius: 5px;
+}

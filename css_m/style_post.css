@@ -112,3 +112,8 @@
 	margin: 0 auto;
 	margin-top: 20px;
 }
+.cause_sick p img {
+	max-width: 472px !important;
+	width: 76% !important;
+	height: auto !important;
+}
