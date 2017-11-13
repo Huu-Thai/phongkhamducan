@@ -1,0 +1,58 @@
+@media only screen and (max-width: 1350px){
+	.timkiem a {
+		display: none;
+	}
+	.nav li a{
+		font-size: 12px;
+	}
+	.kcmenu {
+		margin: 0 10px;
+	}
+}
+@media only screen and (max-width: 1200px){
+	.banner .dlk_banner {
+		top: 8px;
+	}
+}
+@media only screen and (max-width: 915px) {
+	.nav li a{
+		font-size: 11px;
+	}
+	.kcmenu {
+		margin: 0 5px;
+	}
+	.timkiem .box_search {
+		width: 17%;
+	}
+}
+@media only screen and (max-width: 820px) {
+	.nav li a{
+		font-size: 10px;
+	}
+	.timkiem .box_search {
+		width: 14%;
+	}
+	.list_post h1 {
+		font-size: 17px;
+	}
+}
+@media only screen and (max-width: 700px) {
+	.kcmenu {
+		margin: 0 0px;
+	}
+	.list_post h1 {
+		font-size: 15px;
+	}
+	.footer .ftleft{
+		width: 55%;
+	}
+	.footer .ftright{
+		width: 45%;
+	}
+	.content1_main .nd_left h3 {
+		font-size: 14px;
+	}
+	.content1_main .nd_ct1_main {
+		font-size: 13px;
+	}
+}

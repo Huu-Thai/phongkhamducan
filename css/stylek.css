@@ -50,7 +50,7 @@ a:hover{color:#2aed78;}
 .slide{width:100%;}
 .slide img{width:100%;}
 .content1_main{margin-top:20px;}
-.content1_main .nd_left{max-width:485px;text-align:justify;}
+.content1_main .nd_left{box-sizing:border-box;max-width:50%;text-align:justify;}
 .content1_main .nd_left h3{margin:10px 0px;text-align:justify;font-size:17px;text-transform:uppercase;color:#f5ba51;}
 .content1_main .nd_ct1_main{text-indent:30px;}
 .content1_main .nd_left ul{list-style:none;margin:20px auto;width:300px;}
@@ -129,16 +129,17 @@ a:hover{color:#2aed78;}
 .content6_main .box .nd .nd2 h3{font-size:15px;text-transform:uppercase;}
 .content6_main .box .nd .nd2 p{color:#f2a50c;font-weight:bold;font-size:14px;}
 .footer{width:100%;background:#00a644;}
-.footer .ftright{text-align:center;margin:20px 0px;}
+.footer .ftright{box-sizing:border-box;text-align:center;margin:20px 0px;width:50%;}
+.footer .ftright img{box-sizing:border-box;width:100%;}
 .footer .ftright p{padding-top:10px;}
 .footer .ftright p a{color:#fff;font-size:16px;}
 .bottomft{width:100%;background:#1a3d40;text-align:center;color:#00a654;font-size:14px;font-weight:bold;padding:15px 0px;}
 .bottomft span{color:#f2a50c;}
-.footer .ftleft{width:425px;color:#fff;}
+.footer .ftleft{box-sizing:border-box;width:50%;color:#fff;}
 .footer .ftleft h3{text-transform:uppercase;color:#f2a50c;font-size:16px;font-weight:bold;margin-top:15px;}
-.textform{height:25px;margin:5px 0px;width:260px;border:1px solid #fff;border-radius:5px;box-shadow:3px 5px 10px #131212;padding-left:10px;margin-left:26px;}
-.footer .ftleft .ptrieuchung{position:relative;top:10px;width:130px;}
-.footer .ftleft .trieuchung{position:relative;top:-15px;left:124px;border:1px solid #fff;border-radius:5px;box-shadow:3px 5px 10px #131212;padding-left:10px;padding-top:15px;width:258px;height:35px;}
+.textform{box-sizing:border-box;height:25px;margin:5px 0px;width:64%;border:1px solid #fff;border-radius:5px;box-shadow:3px 5px 10px #131212;padding-left:10px;margin-left:26px;}
+/*.footer .ftleft .ptrieuchung{position:relative;top:10px;width:130px;}*/
+.footer .ftleft .trieuchung{box-sizing:border-box;position:relative;top:-15px;left:124px;border:1px solid #fff;border-radius:5px;box-shadow:3px 5px 10px #131212;padding-left:10px;padding-top:15px;width:64%;height:35px;}
 .footer .ftleft .btngui{background:url(../images/bntgui.png) no-repeat;height:35px;width:60px;border:none;float:right;margin-right:25px;cursor:pointer;}
 .popup{width:100%;height:100%;display:none;position:fixed;top:0;left:0;z-index:99999}
 .popup-inner{width:17%;padding:10px;position:absolute;top:34%;left:80%;transform:translate(-50%,-50%);box-shadow:0 2px 6px rgba(0, 0, 0, 0.41);border-radius:3px;}

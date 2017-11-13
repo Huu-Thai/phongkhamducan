@@ -21,14 +21,13 @@
 	<meta name='twitter:site' content='@phongkhamducan' />
 	<meta name='twitter:creator' content='@phongkhamducan' />
 	<link rel="stylesheet" type="text/css" href="css/stylek.css">
-	
+	<link rel="stylesheet" type="text/css" href="css/edit.css">
 	<link rel="stylesheet" type="text/css" href="css/stylelist.css">
-
 	<link rel="stylesheet" type="text/css" href="css/mnk.css">
-	
 	<link rel="stylesheet" type="text/css" href="css/style_post.css">
 	<link rel="stylesheet" href="css/style_specialist.css">
 	<link rel="stylesheet" type="text/css" href="css/comment.css">
+	<link rel="stylesheet" href="css/responsive.css">
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	
 
