@@ -48,7 +48,7 @@
 			include $this->linkPage.$page.".php";
 		endif;
 		?>
-
+		
 		<div class="clear"></div>
 		<?php include $this->linkModule."content7.php"; ?>
 		<div class="clear"></div>
