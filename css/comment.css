@@ -16,8 +16,8 @@
 .comment .box_message textarea {
 	width: 90%;
 }
-.comment .btnSendPar,
-.comment .btnSendChil{
+.btnSendPar,
+.btnSendChil{
 	padding: 5px;
 	margin-top: 5px;
 	background-color: #476ae8;
@@ -27,11 +27,11 @@
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 }
-.comment .btnSendPar {
+.btnSendPar {
 	float: right;
 }
-.comment .btnSendPar:hover,
-.comment .btnSendChil:hover{
+.btnSendPar:hover,
+.btnSendChil:hover{
 	background: #0d2fa9;
 }
 .comment .show_login {
@@ -67,6 +67,9 @@
 }
 .right_mess p {
 	color: #295d0f;
+}
+.message_parent {
+	margin-bottom: 10px;
 }
 .message_child {
 	margin-left: 50px;

@@ -63,6 +63,7 @@
 	</div>
 	<script type="text/javascript" src="ajax/search.js"></script>
 	<script type="text/javascript" src="ajax/rating.js"></script>
+	<script type="text/javascript" src="ajax/comment.js"></script>
 
 	<script type="text/javascript">
 		<?php 

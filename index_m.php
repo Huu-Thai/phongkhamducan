@@ -20,6 +20,7 @@ require_once $models."Loai.php";
 require_once $models."News.php";
 require_once $models."Rating.php";
 require_once $models."User.php";
+require_once $models."Comment.php";
 
 require_once $controllers."Controller.php";
 require_once $controllers."HomeController.php";

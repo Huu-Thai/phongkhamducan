@@ -121,14 +121,14 @@
 				<input type="radio" name="example" class="rating" value="5" />
 			</div>
 			<p>Bệnh liệt dương: Nguyên nhân, triệu chứng cách chữa trị</p>
-			<p>Điểm trung bình: <b>4.6 </b>/ 5 lượt đánh giá</p>
+			<p>Điểm trung bình: <b><?=$data['vote'] ?> </b>/ 5 lượt đánh giá</p>
 		</div>
 		<script src="js/rating.js"></script>
 		<?php echo $data['script']; ?>
 		<div class="clear"></div>
 		<?php include "standpoint.php"; ?>
 		<div class="clear"></div>
-		<?php include "comment.php"; ?>
+		<?php include "comment2.php"; ?>
 		<div class="clear"></div>
 	</div>
 	<div class="clear"></div>

@@ -21,12 +21,11 @@
 	<meta name='twitter:site' content='@phongkhamducan' />
 	<meta name='twitter:creator' content='@phongkhamducan' />
 	<link rel="stylesheet" type="text/css" href="css/stylek.css">
-	<!-- <link rel="stylesheet" type="text/css" href="css/stylek_k.css"> -->
+	
 	<link rel="stylesheet" type="text/css" href="css/stylelist.css">
-	<link rel="stylesheet" type="text/css" href="css/styletrong.css">
+
 	<link rel="stylesheet" type="text/css" href="css/mnk.css">
-	<link rel="stylesheet" type="text/css" href="css/namkhoa.css">
-	<link rel="stylesheet" type="text/css" href="css/phukhoa.css">
+	
 	<link rel="stylesheet" type="text/css" href="css/style_post.css">
 	<link rel="stylesheet" href="css/style_specialist.css">
 	<link rel="stylesheet" type="text/css" href="css/comment.css">
@@ -57,6 +56,7 @@
 	</div>
 	<script type="text/javascript" src="ajax/search.js"></script>
 	<script type="text/javascript" src="ajax/rating.js"></script>
+	<script type="text/javascript" src="ajax/comment.js"></script>
 
 	<script type="text/javascript">
 		<?php 
