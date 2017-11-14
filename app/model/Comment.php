@@ -5,7 +5,7 @@ class Comment extends DB {
 
 	function store($name, $phone, $idLoai, $message, $idTT, $parentId = 0){
 		$anHien = 0;
-		if($patrentId != 0)
+		if($parentId != 0)
 			$anHien = 1;
 		$time = date("Y-m-d H:i:s");
 		$query = "INSERT INTO $this->table(idBL, HoTen, SoDT, ChuyenKhoa, NoiDung, idBaiViet, parent, AnHien, NgayDang)VALUES(null, '$name', $phone, $idLoai, '$message', $idTT, $parentId, $anHien, '$time')";

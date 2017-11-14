@@ -12,13 +12,14 @@
 					</div>
 					<div id="list_message_child_<?=$row['idBL']?>" class="list_message_child">
 					<?php $data['commentChild'] = $comments->getChildComment($row['idBL']); ?>
+					<?php //var_dump($data['commentChild']); ?>
 					<?php if($data['commentChild'] != false): ?>
 					<?php while($rowChild = mysqli_fetch_assoc($data['commentChild'])): ?>
 						<div class="message_child">
 							<img src="images/profile.png">
 							<div class="right_mess">
-								<h2>John</h2>
-								<p>asdfasfsdgdfhfgjhg  sdgfsdsd fgsdg  sdfgsd  sdfs s  s sdf sg dfhjty  tyhtr  er  te tr rt t  rrt t asdfasfsdgdfhfgjhg  sdgfsdsd fgsdg  sdfgsd  sdfs s  s sdf sg dfhjty  tyhtr  er  te tr rt t  rrt t</p>
+								<h2><?=$rowChild['HoTen']?></h2>
+								<p><?=$rowChild['NoiDung']?></p>
 							</div>
 						</div>
 					<?php endwhile; ?>
@@ -52,7 +53,7 @@
 
 				<button type="button" class="btn btn-info" id="send_comment">Gửi</button>
 
-				<input type="hidden" id="idTT" name="idTT" value="<?=$_GET[idTT]?>">
+				<input type="hidden" id="idTT" name="idTT" value="<?=$_GET['idTT']?>">
 				<input type="hidden" id="idLoai" name="idLoai" value="<?=$data['idLoai']?>">
 				
 			</div>
