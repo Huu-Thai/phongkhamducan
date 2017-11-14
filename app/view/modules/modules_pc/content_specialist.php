@@ -10,11 +10,13 @@
 				</div>
 
 				<ul>
-					<?php while($row = mysqli_fetch_assoc($data['subPosts'])): ?>
-						<li>
-							<a href="index.php?nameCtr=ChuyenkhoaController&action=getPost&idLoai=<?=$row['Parent']?>&childIdLoai=<?=$row['idLoai']?>"><i class="doub_arow">>> </i><?=$row['TieuDe'] ?></a>	
-						</li>
-					<?php endwhile; ?>
+					<?php if(isset($data['subPosts'])): ?>
+						<?php while($row = mysqli_fetch_assoc($data['subPosts'])): ?>
+							<li>
+								<a href="<?=$row['TieuDeKD']?>-<?=$row['Parent']?>-<?=$row['idLoai']?>/"><i class="doub_arow">>> </i><?=$row['TieuDe'] ?></a>	
+							</li>
+						<?php endwhile; ?>
+					<?php endif; ?>
 				</ul>
 			</li>
 		</ul>
@@ -31,24 +33,32 @@
 		<div class="list_sick_depart">
 			<?php include "app/view/modules/paginate.php"; ?>
 			
+			<?php 
+			if (isset($data['posts'])) {
+				while($row = mysqli_fetch_assoc($data['posts'])):
+					$rows[] = $row;
+					;
+				endwhile;
+			}
+			?>
 			<?php for($run = $x; $run < $end; $run++): ?>
 				<div class="clear20"></div>
 				<div class="sick_depart">
-			
+
 					<img src="<?=$rows[$run]['UrlHinh']?>" alt="<?=$rows[$run]['Title']?>">
 					<div>
 						<h2><?=$rows[$run]['Title']; ?></h2>
 						<p><?=$rows[$run]['TomTat']; ?></p>
 					</div>
 					<div class="hu_xemthem">
-						<a href="index.php?nameCtr=SingleController&action=showPost&idTT=<?=$rows[$run]['idTT']?>" title="<?=$rows[$run]['Title']?>">Xem chi tiết...</a>
+						<a href="<?=$rows[$run]['TieuDeKD']?>/<?=$rows[$run]['idTT']?>/chi-tiet/" title="<?=$rows[$run]['Title']?>">Xem chi tiết...</a>
 					</div>
 				</div>
 			<?php endfor; ?>
 			<div class="clear20"></div>
 			<ul class="paginate">
 				<?php for($i = 1;$i <= $numPage; $i++): ?>
-						<li <?php echo ($_GET['pageNum'] == $i) ? 'class="active"' : ""?> ><a href="index.php?nameCtr=ChuyenkhoaController&action=getPost&idLoai=<?=$data['idLoai']?>&pageNum=<?=$i?>">Trang <?=$i ?></a></li>
+					<li <?php echo ($_GET['pageNum'] == $i) ? 'class="active"' : ""?> ><a href="<?=$data['TieuDeKD'];?>-<?=$data['idLoai'];?>/page=<?=$i;?>/">Trang <?=$i ?></a></li>
 				<?php endfor; ?>
 			</ul>
 		</div>

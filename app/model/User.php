@@ -14,16 +14,18 @@ class User extends DB {
 
 	function getUser(){
 
-
 	}
 	function checkUser($username, $password){
 
 		$query = "SELECT idUser FROM $this->table WHERE User = '$username' AND Pass = '$password'";
 
 		$result = mysqli_query($this->conn, $query);
-		if(mysqli_num_rows($result) > 0) {
-			return true;
+		if($result){
+			if(mysqli_num_rows($result) > 0) {
+				return true;
+			}
 		}
+		
 		return false;
 	}
 

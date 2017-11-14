@@ -4,14 +4,15 @@
 	<div class="list_post">
 		<h1>bài Viết Liên Quan</h1>
 		<ul class="item_posts">
-		<?php //var_dump($data['postRelated']); ?>
+		<?php if(isset($data['postRelated'])): ?>
 		<?php while($row = mysqli_fetch_assoc($data['postRelated'])): ?>
 			<li>
-				<h3><a href="index.php?nameCtr=SingleController&action=showPost&idTT=<?=$row['idTT']?>"><?=$row['TieuDe'] ?></a></h3>
+				<h3><a href="<?=$row['TieuDeKD']?>/<?=$row['idTT']?>/chi-tiet/"><?=$row['TieuDe'] ?></a></h3>
 				<img src="<?=$row['UrlHinh']?>" alt="<?=$row['Title']?>">
 				<?=$row['TomTat'] ?>
 			</li>
 		<?php endwhile; ?>
+	<?php endif; ?>
 		</ul>
 	</div>
 	<div class="cnt_post">
@@ -19,7 +20,7 @@
 			<h1><?=$data['news']['TieuDe']; ?></h1>
 			<span>
 				<time>Ngày đăng: <?= date('d-m-Y', strtotime($data['news']['NgayDang'])); ?></time>
-				<i>lượt xem: <?=$data['news']['LuotXem']?>></i>
+				<i>lượt xem: <?=$data['news']['LuotXem']?></i>
 			</span>
 		</div>
 		<div class='clear'></div>
@@ -39,7 +40,7 @@
 				</li>
 				<?php while($row = mysqli_fetch_assoc($data['mood'])): ?>
 				<li>
-					<label for="">>> </label><a href="index.php?nameCtr=SingleController&action=showPost&idTT=<?=$row['idTT']?>" ><?=$row['Title'] ?></a>
+					<label for="">>> </label><a href="<?=$row['TieuDeKD']?>/<?=$row['idTT']?>/chi-tiet/" ><?=$row['Title'] ?></a>
 				</li>
 				<?php endwhile; ?>
 				

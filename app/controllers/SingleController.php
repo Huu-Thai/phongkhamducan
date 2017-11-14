@@ -11,6 +11,7 @@ class SingleController extends Controller {
 		$data['news'] = $news->findId($_GET['idTT']);
 		$data['postRelated'] = $news->postRelated($data['news']['idTT'], $data['news']['idCL']);
 		$data['mood'] = $news->getMoodable($data['news']['idTT'], $data['news']['idCL']);
+		$data['idLoai'] = $data['news']['idCL'];
 
 		$data['vote'] = $rating->getVote($_GET['idTT']);
 		if($data['vote'] == 3){
@@ -38,6 +39,7 @@ class SingleController extends Controller {
 
 		if($comment->getComment($_GET['idTT']) != false){
 			$data['comment'] = $comment->getComment($_GET['idTT']);
+
 		}
 
 		// var_dump($data['comment']);
@@ -63,9 +65,18 @@ class SingleController extends Controller {
 		$phone = $_POST['phone'];
 		$message = $_POST['message'];
 		$idTT = $_POST['idTT'];
+		$idLoai = $_POST['idLoai'];
+		$parentId = $_POST['parentId'];
 
-		if($comment->store($name, $phone, $message, $idTT)){
-			echo "tin nhắn của bạn đã được lưu, cảm ơn bạn!";
+		if($comment->store($name, $phone, $idLoai, $message, $idTT, $parentId)){
+			
+			if($parentId != 0){
+				echo "true";
+			}else{
+				echo "tin nhắn của bạn đã được lưu, cảm ơn bạn!";
+			}
+		}else{
+			echo "luu tin nhan loi";
 		}
 	}
 }

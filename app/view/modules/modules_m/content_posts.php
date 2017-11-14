@@ -1,6 +1,19 @@
 <link rel="stylesheet" href="css/rating.css">
 <div class="m640 content_posts">
-	<?php include "list_post_m.php"; ?>
+	
+	<div class="list_post class_inherit">
+		<h1>bài Viết Liên Quan</h1>
+		<ul class="item_posts">
+		<?php if(isset($data['postRelated'])): ?>
+			<?php while($row = mysqli_fetch_assoc($data['postRelated'])): ?>
+				<li>
+					<h3><a href="<?=$row['TieuDeKD']?>/<?=$row['idTT']?>/chi-tiet/"><?=$row['TieuDe'] ?></a></h3>
+				</li>
+			<?php endwhile; ?>
+		<?php endif; ?>
+		</ul>
+	</div>
+
 	<div class="clear20	"></div>
 	<div class="cnt_post">
 		<div class="title_post">
@@ -26,9 +39,9 @@
 					<h3> có thể bạn quan tâm;</h3>
 				</li>
 				<?php while($row = mysqli_fetch_assoc($data['mood'])): ?>
-				<li>
-					<label for="">>> </label><a href="index.php?nameCtr=SingleController&action=showPost&idTT=<?=$row['idTT']?>" ><?=$row['Title'] ?></a>
-				</li>
+					<li>
+						<label for="">>> </label><a href="<?=$row['TieuDeKD']?>/<?=$row['idTT']?>/chi-tiet/" ><?=$row['Title'] ?></a>
+					</li>
 				<?php endwhile; ?>
 				
 			</ul>

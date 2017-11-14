@@ -1,24 +1,5 @@
-<div class="w1000 content_posts">
-	<div class="list_post edit_list_post">
-		<h1>DANH MỤC BỆNH</h1>
-
-		<ul class="department">
-			<li class="title_depart">
-				<div class="bgd_title_sick">
-					<span class="item_plus"></span>
-					<h3><?=$data['loai']['TieuDe']; ?></h3>
-				</div>
-
-				<ul>
-					<?php while($row = mysqli_fetch_assoc($data['subPosts'])): ?>
-						<li>
-							<a href="index.php?nameCtr=ChuyenkhoaController&action=getPost&idLoai=<?=$row['Parent']?>&childIdLoai=<?=$row['idLoai']?>"><i class="doub_arow">>> </i><?=$row['TieuDe'] ?></a>	
-						</li>
-					<?php endwhile; ?>
-				</ul>
-			</li>
-		</ul>
-	</div>
+<div class="m640 content_posts">
+	
 	<div class="cnt_post edit_cnt_post">
 
 		<div class="edit_title_post">
@@ -31,6 +12,14 @@
 		<div class="list_sick_depart">
 			<?php include "app/view/modules/paginate.php"; ?>
 			
+			<?php 
+			if (isset($data['posts'])) {
+				while($row = mysqli_fetch_assoc($data['posts'])):
+					$rows[] = $row;
+					;
+				endwhile;
+			}
+			?>
 			<?php for($run = $x; $run < $end; $run++): ?>
 				<div class="clear20"></div>
 				<div class="sick_depart">
@@ -41,18 +30,18 @@
 						<p><?=$rows[$run]['TomTat']; ?></p>
 					</div>
 					<div class="hu_xemthem">
-						<a href="index.php?nameCtr=SingleController&action=showPost&idTT=<?=$rows[$run]['idTT']?>" title="<?=$rows[$run]['Title']?>">Xem chi tiết...</a>
+						<a href="<?=$rows[$run]['TieuDeKD']?>/<?=$rows[$run]['idTT']?>/chi-tiet/" title="<?=$rows[$run]['Title']?>">Xem chi tiết...</a>
 					</div>
 				</div>
 			<?php endfor; ?>
 			<div class="clear20"></div>
 			<ul class="paginate">
 				<?php for($i = 1;$i <= $numPage; $i++): ?>
-					<li <?php echo ($_GET['pageNum'] == $i) ? 'class="active"' : ""?> ><a href="index.php?nameCtr=ChuyenkhoaController&action=getPost&idLoai=<?=$data['idLoai']?>&pageNum=<?=$i?>">Trang <?=$i ?></a></li>
+					<li <?php echo ($_GET['pageNum'] == $i) ? 'class="active"' : ""?> ><a href="<?=$data['TieuDeKD'];?>-<?=$data['idLoai'];?>/page=<?=$i;?>/">Trang <?=$i ?></a></li>
 				<?php endfor; ?>
 			</ul>
 		</div>
 	</div>
 </div>
-</div>
+
 

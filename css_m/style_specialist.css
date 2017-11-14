@@ -94,7 +94,9 @@
 	background:#FEF6E6;
 }
 .list_sick_depart .sick_depart img {
-	max-width: 27%;
+	width: 27%;
+	max-width:175px;
+	max-height: 115px;
 	float: left;
 	padding-right: 15px;
 }
@@ -144,4 +146,24 @@
 	width: 100%;
 	margin: 0 auto;	
 	text-align: center;
+}
+.paginate li{
+	float: left;
+	margin-right: 5px;
+	padding: 5px;
+	background-color: #2ad3ed;
+	border-radius: 5px;
+}
+.paginate li a {
+	font-size: 11px;
+	color: #fff;
+}
+.paginate li:last-child {
+	margin-right: 0;
+}
+.paginate li:hover {
+	background-color: #4147de;
+}
+.paginate .active {
+	background-color: #4147de;
 }

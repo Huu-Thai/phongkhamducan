@@ -54,7 +54,7 @@
 			<ul class="nav"> 
 				<li class="menutrangchu"> <a href="./" title="Trang Chủ" alt="Trang Chủ" class="chuin">Trang Chủ</a></li>
 				<?php while($row = mysqli_fetch_assoc($data['menu'])): ?>
-					<li class="kcmenu"> <a href="index.php?nameCtr=ChuyenkhoaController&action=getPost&idLoai=<?=$row['idLoai']?>" title="<?=$row['Title']?>" alt="<?=$row['Title']?>" class="chuin"><?=$row['TieuDe'] ?></a></li>
+					<li class="kcmenu"> <a href="<?=$row['TieuDeKD']?>-<?=$row['idLoai']?>.html" title="<?=$row['Title']?>" alt="<?=$row['Title']?>" class="chuin"><?=$row['TieuDe'] ?></a></li>
 				<?php endwhile; ?>
 				<li class="kcmenu"> <a href="#" title="Liên Hệ" alt="CLiên Hệ" class="chuin">Liên Hệ</a></li>
 			</ul>         

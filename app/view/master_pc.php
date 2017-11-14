@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<base href="http://localhost/phongkhamducan/" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>phong kham du can</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
 	<meta http-equiv="content-language" itemprop="inLanguage" content="vi"/>
 	<meta http-equiv="Content-Language" content="vi">
 	<meta http-equiv="REFRESH" content="1800" />

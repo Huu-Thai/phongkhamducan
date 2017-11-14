@@ -1,31 +1,40 @@
 <div class="box_show_mess">
-		<div class="message">
+	<div class="message">
 		<?php if(isset($data['comment'])): ?>
-		<?php while($row = mysqli_fetch_assoc($data['comment'])): ?>
-			<div class="message_parent">
-				<img src="images/profile.png">
-				<div class="right_mess">
-					<h2><?=$row['HoTen'] ?></h2>
-					<p><?=$row['NoiDung'] ?></p>
-					<a href="javascript:void(0)">Trả lời</a>
-				</div>
-				<!-- <div class="message_child">
+			<?php while($row = mysqli_fetch_assoc($data['comment'])): ?>
+				<div class="message_parent">
 					<img src="images/profile.png">
 					<div class="right_mess">
-						<h2>John</h2>
-						<p>asdfasfsdgdfhfgjhg  sdgfsdsd fgsdg  sdfgsd  sdfs s  s sdf sg dfhjty  tyhtr  er  te tr rt t  rrt t asdfasfsdgdfhfgjhg  sdgfsdsd fgsdg  sdfgsd  sdfs s  s sdf sg dfhjty  tyhtr  er  te tr rt t  rrt t</p>
+						<h2><?=$row['HoTen'] ?></h2>
+						<p><?=$row['NoiDung'] ?></p>
+						<a id="<?=$row['idBL']?>" class="reply" href="javascript:void(0)">Trả lời</a>
+						<input type="hidden" name="parentId" value="<?=$row['idBL']?>">
 					</div>
-				</div> -->
-				<!-- <div class="box_rep">
-					<textarea name="" id="" rows="1"></textarea>
-					<a href="javscript:void(0)" class="btnSendChil">Gửi</a>
-				</div> -->
-			</div>
-		<?php endwhile; ?>
+					<div id="list_message_child_<?=$row['idBL']?>" class="list_message_child">
+					<?php $data['commentChild'] = $comments->getChildComment($row['idBL']); ?>
+					<?php if($data['commentChild'] != false): ?>
+					<?php while($rowChild = mysqli_fetch_assoc($data['commentChild'])): ?>
+						<div class="message_child">
+							<img src="images/profile.png">
+							<div class="right_mess">
+								<h2>John</h2>
+								<p>asdfasfsdgdfhfgjhg  sdgfsdsd fgsdg  sdfgsd  sdfs s  s sdf sg dfhjty  tyhtr  er  te tr rt t  rrt t asdfasfsdgdfhfgjhg  sdgfsdsd fgsdg  sdfgsd  sdfs s  s sdf sg dfhjty  tyhtr  er  te tr rt t  rrt t</p>
+							</div>
+						</div>
+					<?php endwhile; ?>
+					<?php endif; ?>
+					</div>
+					<div id="box_rep_<?=$row['idBL']?>" class="box_rep">
+						<input type="text" name="name">
+						<textarea name="commentChild" class="commentChild" rows="1"></textarea>
+						<a href="javscript:void(0)" class="btnSendChil">Gửi</a>
+					</div>
+				</div>
+			<?php endwhile; ?>
 		<?php endif; ?>
-			
-		</div>
+
 	</div>
+</div>
 <div style="width: 100%;  border: 1px solid #e6e6e6; border-radius: 10px 10px 10px 10px; padding: 10px; position: relative; margin-bottom:10px; margin-top: 20px;box-sizing:border-box;">
 	<!-- dat cau hoi -->
 	<div class="clearfix"></div>
@@ -44,6 +53,7 @@
 				<button type="button" class="btn btn-info" id="send_comment">Gửi</button>
 
 				<input type="hidden" id="idTT" name="idTT" value="<?=$_GET[idTT]?>">
+				<input type="hidden" id="idLoai" name="idLoai" value="<?=$data['idLoai']?>">
 				
 			</div>
 		</form>

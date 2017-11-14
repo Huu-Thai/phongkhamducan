@@ -8,16 +8,25 @@ class Controller {
 
 
 	function view($page, $data = []){
+		ob_start();
+		$comments = new Comment();
+
 		$_SESSION['linkCurrent'] = (isset($_SERVER['HTTPS']) ? 'https' : 'http')."://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 		$loai = new Loai();
-		$data['menu'] = $loai->getMainMenu();
-
+		if ($loai->getMainMenu()) {
+			$data['menu'] = $loai->getMainMenu();
+		}
+		
 		if(!is_mobile()){
 			require "app/view/master_pc.php";
 		}else{
 			require "app/view/master_m.php";
 		}
+		$content = ob_get_contents();
+		ob_end_clean();
 		
+	    // Xuất kết quả
+	    echo $content;
 	}
 
 	function getLink(){
