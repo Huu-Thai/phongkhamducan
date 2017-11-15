@@ -12,7 +12,7 @@
 					</div>
 					<div id="list_message_child_<?=$row['idBL']?>" class="list_message_child">
 					<?php $data['commentChild'] = $comments->getChildComment($row['idBL']); ?>
-					<?php //var_dump($data['commentChild']); ?>
+					
 					<?php if($data['commentChild'] != false): ?>
 					<?php while($rowChild = mysqli_fetch_assoc($data['commentChild'])): ?>
 						<div class="message_child">
@@ -26,8 +26,8 @@
 					<?php endif; ?>
 					</div>
 					<div id="box_rep_<?=$row['idBL']?>" class="box_rep">
-						<input type="text" name="name">
-						<textarea name="commentChild" class="commentChild" rows="1"></textarea>
+						<input type="text" name="name" placeholder="nhập tên của bạn">
+						<textarea name="commentChild" class="commentChild" rows="1" placeholder="nhập tin nhắn của bạn"></textarea>
 						<a href="javscript:void(0)" class="btnSendChil">Gửi</a>
 					</div>
 				</div>

@@ -63,6 +63,7 @@ $(document).ready(function() {
 						},
 						success: function(data){
 							if(data == 'true'){
+								console.log(data);
 								appendHTML(parentId, name, message);
 							}
 						}
@@ -70,6 +71,7 @@ $(document).ready(function() {
 				}
 				$("#box_rep_"+parentId +' input').val('');
 				$("#box_rep_"+parentId + " textarea").val('');
+				$(".box_rep").css('display','none');
 			});
 		});
 	});

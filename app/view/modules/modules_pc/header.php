@@ -55,23 +55,44 @@
 				<li class="menutrangchu"> <a href="./" title="Trang Chủ" alt="Trang Chủ" class="chuin">Trang Chủ</a></li>
 				<?php if (isset($data['menu'])): ?>
 					<?php while($row = mysqli_fetch_assoc($data['menu'])): ?>
-						
-					<li class="kcmenu"> <a href="<?=$row['TieuDeKD']?>-<?=$row['idLoai']?>.html" title="<?=$row['Title']?>" alt="<?=$row['Title']?>" class="chuin"><?=$row['TieuDe'] ?></a></li>
-				<?php endwhile; ?>
-				<?php endif ?>
-				
-				<li class="kcmenu"> <a href="#" title="Liên Hệ" alt="Liên Hệ" class="chuin">Liên Hệ</a></li>
-			</ul>         
-			<div class="timkiem right">
+						<li class="kcmenu">
+							<a href="<?=$row['TieuDeKD']?>-<?=$row['idLoai']?>.html" title="<?=$row['Title']?>" alt="<?=$row['Title']?>" class="chuin">
+								<?=$row['TieuDe'] ?>
+								<?php 
+								if($loai->getSubNewsByIdLoai($row['idLoai']))
+									$data['subMenu'] = $loai->getSubNewsByIdLoai($row['idLoai']); 
+								?>
+								<?php if(isset($data['subMenu'])): ?>
+									<span>▼</span>
+								</a>
 
-				<a href="#" data-popup-open="popup-1" title="Tìm Kiếm" alt="Tìm Kiếm">
-					<img src="images/icon_search.png" title="Tìm Kiếm" alt="Tìm Kiếm">
-				</a>      
-				<input type="text" class="box_search" placeholder="search" cols="50">    
-			</div>
-			<div class="clear"></div>
+								<ul class="sub_menu">
+									<?php while($rowChild = mysqli_fetch_assoc($data['subMenu'])): ?>
+									<li>
+										<a href="<?=$rowChild['TieuDeKD']?>-<?=$rowChild['Parent']?>-<?=$rowChild['idLoai']?>/"><?=$rowChild['TieuDe'] ?></a>
+									</li>
+									<?php endwhile; ?>
+							
+								</ul>
+							<?php else: ?>
+							</a>
+						<?php endif; ?>
+					</li>
+				<?php endwhile; ?>
+			<?php endif ?>
+
+			<li class="kcmenu"> <a href="#" title="Liên Hệ" alt="Liên Hệ" class="chuin">Liên Hệ</a></li>
+		</ul>         
+		<div class="timkiem right">
+
+			<!-- <a href="#" data-popup-open="popup-1" title="Tìm Kiếm" alt="Tìm Kiếm">
+				<img src="images/icon_search.png" title="Tìm Kiếm" alt="Tìm Kiếm">
+			</a> -->      
+			<input type="text" class="box_search" placeholder="search" cols="50">    
 		</div>
+		<div class="clear"></div>
 	</div>
+</div>
 </header>
 <style>
 	.box_search {
@@ -88,5 +109,9 @@
 	.box_search:hover {
 		outline: 1.5px;
 		outline-color: #02ff82;
+	}
+	.sub_menu{
+		max-width: 200%;
+		font-size: 13px;
 	}
 </style>

@@ -50,36 +50,85 @@
 	<div class="clear"></div>
 	<div class="menutop">
 		<div class="m640 edit_menutop"> 
-			<a class="menu_button left" href="javascript:void(0)" onclick="open_menu()" ondblclick="close_menu()"></a>       
+			<a class="menu_button left" href="javascript:void(0)" onclick="open_menu()"></a>       
 			<ul class="nav"> 
 				<li class="menutrangchu"> <a href="./" title="Trang Chủ" alt="Trang Chủ" class="chuin">Trang Chủ</a></li>
 				<?php while($row = mysqli_fetch_assoc($data['menu'])): ?>
-					<li class="kcmenu"> <a href="<?=$row['TieuDeKD']?>-<?=$row['idLoai']?>.html" title="<?=$row['Title']?>" alt="<?=$row['Title']?>" class="chuin"><?=$row['TieuDe'] ?></a></li>
-				<?php endwhile; ?>
-				<li class="kcmenu"> <a href="#" title="Liên Hệ" alt="CLiên Hệ" class="chuin">Liên Hệ</a></li>
-			</ul>         
-			<div class="timkiem right">
-				<input type="text" class="box_search" placeholder="search" cols="50">
-				<a href="#" data-popup-open="popup-1" title="Tìm Kiếm" alt="Tìm Kiếm">
-					<img src="images/icon_search.png" title="Tìm Kiếm" alt="Tìm Kiếm">
-				</a>           
-			</div>
-			<div class="clear"></div>
+					<li class="kcmenu">
+						<a href="<?=$row['TieuDeKD']?>-<?=$row['idLoai']?>.html" title="<?=$row['Title']?>" alt="<?=$row['Title']?>" class="chuin">
+							<?=$row['TieuDe'] ?>
+							<?php
+							if($loai->getSubNewsByIdLoai($row['idLoai']))
+								$data['subMenu'] = $loai->getSubNewsByIdLoai($row['idLoai']); 
+							?>
+							<?php if(isset($data['subMenu'])): ?>
+								<span>▼</span>
+							</a>
+
+							<ul class="sub_menu">
+								<?php while($rowChild = mysqli_fetch_assoc($data['subMenu'])): ?>
+									<li>
+										<a href="<?=$rowChild['TieuDeKD']?>-<?=$rowChild['Parent']?>-<?=$rowChild['idLoai']?>/"><?=$rowChild['TieuDe'] ?></a>
+									</li>
+								<?php endwhile; ?>
+								
+							</ul>
+						<?php else: ?>
+						</a>
+					<?php endif; ?>
+				</li>
+			<?php endwhile; ?>
+			<li class="kcmenu"> <a href="#" title="Liên Hệ" alt="CLiên Hệ" class="chuin">Liên Hệ</a></li>
+		</ul>         
+		<div class="timkiem right">
+			<input type="text" class="box_search" placeholder="search" cols="50">
+			<a href="#" data-popup-open="popup-1" title="Tìm Kiếm" alt="Tìm Kiếm">
+				<img src="images/icon_search.png" title="Tìm Kiếm" alt="Tìm Kiếm">
+			</a>           
 		</div>
+		<div class="clear"></div>
 	</div>
+</div>
 </header>
-<script>
+<style>
+	.nav {
+		min-width: 190px;
+	}
+	.nav li a {
+		/*background: #00a654;*/
+		color: #FFF;
+		display: block;
+		padding: 0px 5px 0px 35px;
+		text-align: justify;
+	}
 	
+</style>
+<script>
+	var flag = 0;
 	function open_menu(){
-		var class_menu = document.getElementsByClassName("nav");
-		for(i = 0; i < class_menu.length; i++){
-			class_menu[i].style.display = 'block';
+		flag++;
+		
+		if(flag==2){
+
+			close_menu();
+			flag = 0;
+
+		}else{
+			
+			var class_menu = document.getElementsByClassName("nav");
+			for(i = 0; i < class_menu.length; i++){
+				class_menu[i].style.display = 'block';
+			}
 		}
 	}
+
+	// document.getElementsByClassName('nav').addEventListener('click', close_menu);
+	
 	function close_menu(){
 		var class_menu = document.getElementsByClassName("nav");
 		for(i = 0; i < class_menu.length; i++){
 			class_menu[i].style.display = 'none';
 		}
 	}
+
 </script>

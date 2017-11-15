@@ -12,7 +12,7 @@ a:hover{color:#2aed78;}
 ::selection{color:#fff;background:#39b54a;text-shadow:none;}
 .left{float:left}
 .right{float:right}
-.timkiem{margin-right: 35px;height:inherit;line-height:14px;}
+.timkiem{margin-right: 35px;line-height:14px;}
 .clear{clear:both}
 .clear5{clear:both;height:5px}
 .clear10{clear:both;height:10px}
