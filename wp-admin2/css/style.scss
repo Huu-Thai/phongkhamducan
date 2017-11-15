@@ -104,7 +104,7 @@ ul{
 .col-md-12{@include col-md(100%, left, border-box);}
 
 .clearfix{
-	clear: float;
+	clear: both;
 	content:'';
 }
 %height {height: 100%;}
@@ -114,7 +114,7 @@ ul{
 	background: linear-gradient(top,$color_start 0%, $color_end 100%);
 	background: -webkit-linear-gradient(top,$color_start 0%, $color_end 100%);
 	background: -moz-linear-gradient(top,$color_start 0%, $color_end 100%);
-	// -webkit-linear-gradient(top,  #6c6e74 0%,#4b4d51 100%)
+	
 }
 .menu{
 	list-style: none;
@@ -167,7 +167,7 @@ ul{
 
 section.content{
 	height:90%;
-	clear:float;
+	clear: both;
 	min-height: 450px;
 
 	nav.content-left {
@@ -255,6 +255,9 @@ section.content{
 							}
 						}
 					}
+				}
+				.active {
+					@include background_gradient_linear(#a5cd4e, #6b8f1a);
 				}
 			}
 

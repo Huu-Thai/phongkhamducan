@@ -1,0 +1,1 @@
+<?php include $this->linkModule.'content-main.php'; ?>

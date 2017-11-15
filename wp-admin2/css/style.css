@@ -182,7 +182,7 @@ ul {
   box-sizing: border-box; }
 
 .clearfix {
-  clear: float;
+  clear: both;
   content: ''; }
 
 #wrapper, #header .header-left, #header .header-right, #header .header-right .header-right-left, #header .header-right .header-right-left .arrow, section.content nav.content-left {
@@ -219,7 +219,7 @@ section.content nav.content-left .menu-left .menu-item, section.content nav.cont
 
 section.content {
   height: 90%;
-  clear: float;
+  clear: both;
   min-height: 450px; }
   section.content nav.content-left {
     background: url(../images/bg_leftcolumn.jpg) repeat;
@@ -292,6 +292,11 @@ section.content {
                 margin-right: 20px; }
               section.content nav.content-left .menu-left .menu-item .sub-menu li a a:before {
                 content: ''; }
+        section.content nav.content-left .menu-left .menu-item .active {
+          background: #a5cd4e;
+          background: linear-gradient(top, #a5cd4e 0%, #6b8f1a 100%);
+          background: -webkit-linear-gradient(top, #a5cd4e 0%, #6b8f1a 100%);
+          background: -moz-linear-gradient(top, #a5cd4e 0%, #6b8f1a 100%); }
   section.content .content-right .content-right-header {
     background-image: url(../images/phantrang_bg2.png);
     background-repeat: repeat-x;
