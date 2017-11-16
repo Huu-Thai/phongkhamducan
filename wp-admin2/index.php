@@ -2,6 +2,9 @@
 
 session_start();
 
+$_SESSION['adminRoot'] = __DIR__;
+
+
 $adminControllers = 'app/controllers/';
 $adminModel = 'app/Model/';
 

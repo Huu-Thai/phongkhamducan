@@ -2,6 +2,39 @@
 
 class UserController extends Controller {
 
+	function showLogin(){
+
+		require_once $this->linkPage."login.php";
+	}
+
+	public function login(){
+		$user = new User();
+		$this->getLink();
+
+		if(isset($_POST['btnLog'])){
+			$username = $_POST['username'];
+			$pass = md5($_POST['password']);
+
+			if($user->checkUser($username, $pass)){
+
+				$_SESSION['user']['name'] = $username;
+				header("location:".$this->root);
+			}else{
+
+				$_SESSION['error'] = 'tài khoản không tồn tại';
+				header('location:'.$_SESSION['oldLink']);
+			}
+		}else{
+			header('location:'.$_SESSION['oldLink']);
+		}
+	}
+
+	public function logout(){
+
+		unset($_SESSION['user']);
+		header('location:index.php?nameCtr=UserController&action=showLogin');
+	}
+
 	public function addUser(){
 		
 		$this->view('add-user');
@@ -17,7 +50,7 @@ class UserController extends Controller {
 		$this->view('change-task-user', $data);
 	}
 
-	function handleAddUser(){
+	public function handleAddUser(){
 		$this->getLink();
 		$user= new User();
 
@@ -40,14 +73,14 @@ class UserController extends Controller {
 		}
 	}
 
-	function getAllUser(){
+	public function getAllUser(){
 		$user = new User();
 		$data['users'] = $user->getAllUser();
 
 		$this->view('show-user', $data);
 	}
 
-	function handleChangePass(){
+	public function handleChangePass(){
 		$user = new User();
 		$this->getLink();
 
@@ -76,7 +109,7 @@ class UserController extends Controller {
 		
 	}
 
-	function handleChangeTask(){
+	public function handleChangeTask(){
 		$user = new User();
 		$this->getLink();
 
@@ -99,7 +132,7 @@ class UserController extends Controller {
 		}	
 	}
 
-	function deleteUser(){
+	public function deleteUser(){
 		$user = new User();
 		$this->getLink();
 

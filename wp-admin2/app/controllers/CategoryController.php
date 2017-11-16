@@ -2,6 +2,13 @@
 
 class CategoryController extends Controller {
 
+	function __construct(){
+
+		if(!isset($_SESSION['user'])){
+			header("location:".$this->linkPage.'login.php');
+		}
+	}
+
 	public function addCate(){
 		$category = new Category();
 

@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 if(isset($_SESSION['user']) && isset($cookie) == 0){
 	$expeired = time()+(24*60*60);
 	$value = strval(json_encode($_SESSION['user']));

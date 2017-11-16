@@ -8,7 +8,7 @@
 		</div>
 		<div class="header-right-right col-md-10">
 			<p>Chào bạn: <a href="">Thái</a> <img src="images/icons/user.png" alt=""></p>
-			<p><a href="">Thoát</a></p>
+			<p><a href="index.php?nameCtr=UserController&action=logout">Thoát</a></p>
 		</div>
 
 	</div>

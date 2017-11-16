@@ -1,4 +1,5 @@
 <?php 
+
 global $is_lynx, $is_gecko, $is_winIE, $is_macIE, $is_opera, $is_NS4, $is_safari, $is_chorme, $is_iphone, $is_IE, $is_apache, $is_IIS, $is_iis7;
 
 // Simple browser detection 

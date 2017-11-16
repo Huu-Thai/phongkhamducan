@@ -7,15 +7,15 @@
 <table id="dsloaitin" border="1" cellpadding="4" cellspacing="0" width="450" align="center" />
 
 <tr>
-	<th width="20">STT</th>
+	<th width="20">ID</th>
 	<th width="200">User</th>
-	<th width="80">Chức Vụ</th>
+	<th width="150">Chức Vụ</th>
 	<th width="150">Thao Tác</th>
 </tr>
-<?php if(isset($data['users'])): $i = 1;?>
+<?php if($data['users'] != false): $i = 1;?>
 	<?php while ($row = mysqli_fetch_assoc($data['users'])): ?>
 		<tr>  	
-			<td><?=$i ?></td>
+			<td><?=$row['idUser']; ?></td>
 			<td><?=$row['User'] ?></td>
 			<td><?=$row['task'] ?></td>
 			<td width="100" align="center">
