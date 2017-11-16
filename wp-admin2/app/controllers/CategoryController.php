@@ -2,9 +2,12 @@
 
 class CategoryController extends Controller {
 
-	public function addNews(){
+	public function addCate(){
+		$category = new Category();
 
-		$this->view('add-category');
+		$data['category'] = $category->getCategory();
+
+		$this->view('add-category', $data);
 	}
 
 	public function addPage(){

@@ -13,7 +13,7 @@
 					<a href=""><em>01</em>Item 1</a>
 				</li>
 				<li>
-					<a href="index.php?nameCtr=CategoryController&action=addNews"><em>01</em>Thêm loại tin</a>
+					<a href="index.php?nameCtr=CategoryController&action=addCate"><em>01</em>Thêm loại tin</a>
 				</li>
 			</ul>
 		</li>
@@ -69,7 +69,7 @@
 			<ul class="sub-menu">
 				<li>
 
-					<a href=""><em>01</em>Xem thông tin người dùng</a>
+					<a href="index.php?nameCtr=UserController&action=getAllUser"><em>01</em>Xem thông tin người dùng</a>
 				</li>
 				<li>
 					<a href="index.php?nameCtr=UserController&action=addUser"><em>01</em>Thêm người dùng</a>

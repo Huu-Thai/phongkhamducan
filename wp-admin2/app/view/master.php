@@ -1,3 +1,9 @@
+<script>
+	<?php 
+	if(isset($_SESSION['script'])) echo $_SESSION['script'];
+	unset($_SESSION['script']);
+	?>
+</script>
 <!DOCTYPE html>
 <html>
 <head>

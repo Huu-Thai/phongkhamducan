@@ -3,8 +3,13 @@
 session_start();
 
 $adminControllers = 'app/controllers/';
-$adModel = 'app/Model/';
+$adminModel = 'app/Model/';
 
+require_once $adminModel."DB.php";
+require_once $adminModel."Category.php";
+require_once $adminModel."News.php";
+require_once $adminModel."User.php";
+require_once $adminModel."Comment.php";
 
 require_once $adminControllers.'Controller.php';
 require_once $adminControllers."HomeController.php";

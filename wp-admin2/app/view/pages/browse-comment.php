@@ -12,10 +12,12 @@
 			</tr>
 		</thead>
 		<tbody>
-			
-			<?php while($row = mysql_fetch_assoc($comments)): ?>
-				<?php $rows[] = $row; ?>
-			<?php endwhile; ?>
+			<?php if(isset($data['comments'])): ?>
+				<?php include $this->linkModule.'paginate.php'; ?>
+				<?php while($row = mysqli_fetch_assoc($data['comments'])): ?>
+					<?php $rows[] = $row; ?>
+				<?php endwhile; ?>
+			<?php endif; ?>
 			<?php for($run = $x; $run < $end; $run++): ?>
 				<tr>
 					<td scope="col"></td>
@@ -32,24 +34,10 @@
 				<td colspan="7">
 
 					<p id="thanhphantrang">
-						<!-- <a href="/phongkhamducan/wp-admin/main.php?&p=check_comment">
-							<img src="img/phantrang_first.png" width="16px" height="16px">
-						</a>
-						<a href="/phongkhamducan/wp-admin/main.php?&p=check_comment&pageNum=2">
-							<img src="img/phantrang_previous.png" width="16px" height="16px">
-						</a> -->
-						<!-- <span class="phan_trang">1</span> -->
 						<?php for($i = 1; $i <= $numPage; $i++): ?>
-						<a class="trang" href="/phongkhamducan/wp-admin/main.php?&p=check_comment&pageNum=<?=$i?>"><?=$i ?></a>
+							<a class="trang" href="/phongkhamducan/wp-admin/main.php?&p=check_comment&pageNum=<?=$i?>"><?=$i ?></a>
 						<?php endfor; ?>
-						<!-- <a class="trang" href="/phongkhamducan/wp-admin/main.php?&p=check_comment&pageNum=3">3</a> -->
 
-						<!-- <a href="/phongkhamducan/wp-admin/main.php?&p=check_comment&pageNum=2">
-							<img src="img/phantrang_next.png" width="16px" height="16px">
-						</a>
-						<a href="/phongkhamducan/wp-admin/main.php?&p=check_comment&pageNum=3">
-							<img src="img/phantrang_last.png" width="16px" height="16px">
-						</a> -->
 					</p>
 				</td>
 			</tr>

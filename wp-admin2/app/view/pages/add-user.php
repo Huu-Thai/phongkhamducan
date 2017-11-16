@@ -1,4 +1,4 @@
-<form action="" method="post" enctype="multipart/form-data" name="form1" id="form1">
+<form action="index.php?nameCtr=UserController&action=handleAddUser" method="post" enctype="multipart/form-data">
 <table border="1" align="center" cellpadding="4" cellspacing="0">
 <tr> <td colspan="2" align="center">THÊM TÀI KHOẢN</td> </tr>
 
