@@ -51,7 +51,31 @@ class NewsController extends Controller {
 
 		if(isset($_POST['btnOK'])){
 
-			$data['Parent'] = (int)$_POST['Parent'];
+			$parentId = $category->findParentId($_POST['idLoai']);
+
+			if($parentId == 0){
+
+				$data['idCL'] = (int)$_POST['idLoai'];
+				$data['idLoai'] = 0;
+				$data['idCon'] = 0;
+			}else{
+
+				$parentId_1 = $category->findParentId($parentId);
+
+				if($parentId_1 == 0){
+
+					$data['idCL'] = $parentId;
+					$data['idLoai'] = (int)$_POST['idLoai'];
+					$data['idCon'] = 0;
+				}else{
+
+					$data['idCL'] = $parentId_1;
+					$data['idLoai'] = $parentId;
+					$data['idCon'] = (int)$_POST['idLoai'];
+				}
+			}
+
+
 			$data['TieuDe'] = $category->deleteFormat($_POST['TieuDe']);
 			$data['TieuDeKD'] = $category->stripUnicode($data['TieuDe']);
 			$data['UrlHinh'] = str_replace('images', 'upload', $category->deleteFormat($_POST['UrlHinh']));
@@ -61,7 +85,7 @@ class NewsController extends Controller {
 			$data['Des'] = $category->deleteFormat($_POST['Des']);
 			$data['Keyword'] = $category->deleteFormat($_POST['Keyword']);
 			
-			if($category->addPage($data) != false){
+			if($category->store($data) != false){
 
 				$_SESSION['script'] = "alert('Thêm thành công')";
 				header("location:".$_SESSION['oldLink']);

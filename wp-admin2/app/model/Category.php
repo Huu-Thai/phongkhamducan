@@ -26,5 +26,33 @@ class Category extends DB {
 	}
 
 
-	
+	public function getParentId($childId){
+
+		$query = "SELECT Parent, TieuDe FROM $this->table WHERE idLoai = $childId AND AnHien = 1";
+
+		return $this->result($query);
+	}
+
+	// tìm đệ quy lên
+	function findRecursive($childId){
+
+		$result = $this->getParentId($childId);
+		if($result != false){
+			$row = mysqli_fetch_assoc($result);
+			if($row['Parent'] == 0){
+				return $childId;
+			}else{
+				return self::findRecursive($row['Parent']);
+			}
+		}
+	}
+
+	function findParentId($childId){
+
+		$result = $this->getParentId($childId);
+		if($result != false){
+			return mysqli_fetch_assoc($result)['Parent'];
+		}
+		return 0;
+	}
 }
