@@ -1,4 +1,4 @@
-<form action="" method="post" enctype="multipart/form-data" name="form1" id="form1">
+<form action="index.php?nameCtr=CategoryController&action=handleAddCate" method="post" enctype="multipart/form-data" name="form1" id="form1">
   <table border="1" align="center" cellpadding="4" cellspacing="0" class="khungk">
     <tr> <td colspan="2" align="center">THÊM DANH MỤC</td> </tr>
 
@@ -6,7 +6,7 @@
      <td>
       <select  id="Parent" name="Parent">
         <option value="0">Không Có</option>
-        <?php if(isset($data['category'])): ?>
+        <?php if(isset($data['category']) != false): ?>
           
           <?php while ($row = mysqli_fetch_assoc($data['category'])):?>
             <option value="<?=$row['idLoai']; ?>" style="font-weight:bold"><?=$row['TieuDe']; ?></option>
@@ -65,25 +65,6 @@
 </tr>
 <tr><td width="100">Keyword</td>
  <td><input type="text" name="Keyword" id="Keyword" /></td>
-</tr>
-
-<tr><td width="100">H1</td>
- <td><input type="text" name="H1" id="Keyword" value="H1 Là Title Danh Mục" readonly /></td>
-</tr>
-<tr><td width="100">H2</td>
- <td><input type="text" name="H2" id="Keyword" /></td>
-</tr>
-<tr><td width="100">H3</td>
- <td><input type="text" name="H3" id="Keyword" /></td>
-</tr>
-<tr><td width="100">H4</td>
- <td><input type="text" name="H4" id="Keyword" /></td>
-</tr>
-<tr><td width="100">H5</td>
- <td><input type="text" name="H5" id="Keyword" /></td>
-</tr>
-<tr><td width="100">H6</td>
- <td><input type="text" name="H6" id="Keyword" /></td>
 </tr>
 
 <tr><td colspan="2" align="center"><input type="submit" name="btnOK" id="btnOK" value="Thêm" />

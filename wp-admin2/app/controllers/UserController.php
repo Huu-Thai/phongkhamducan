@@ -14,7 +14,6 @@ class UserController extends Controller {
 		if(isset($_POST['btnLog'])){
 			$username = $_POST['username'];
 			$pass = md5($_POST['password']);
-
 			if($user->checkUser($username, $pass)){
 
 				$_SESSION['user']['name'] = $username;
@@ -22,7 +21,7 @@ class UserController extends Controller {
 			}else{
 
 				$_SESSION['error'] = 'tài khoản không tồn tại';
-				header('location:'.$_SESSION['oldLink']);
+				header('location:'.$this->linkLogin);
 			}
 		}else{
 			header('location:'.$_SESSION['oldLink']);

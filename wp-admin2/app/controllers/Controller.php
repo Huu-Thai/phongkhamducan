@@ -5,6 +5,7 @@ class Controller  {
 	public $linkModule = 'app/view/modules/';
 	public $linkPage = 'app/view/pages/';
 	public $root = 'http://localhost/phongkhamducan/wp-admin2/';
+	public $linkLogin = 'index.php?nameCtr=UserController&action=showLogin';
 
 		
 	function view($page, $data = []){
@@ -15,7 +16,7 @@ class Controller  {
 		if(isset($_SESSION['user']))
 			require_once "app/view/master.php";
 		else
-			header("location:index.php?nameCtr=UserController&action=showLogin");	
+			header("location:".$this->linkLogin);	
 	}
 
 

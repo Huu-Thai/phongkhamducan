@@ -23,7 +23,7 @@ abstract class DB {
 
 		$query = "SELECT `idLoai`, `TieuDe`, `TieuDeKD`, `UrlHinh`, `TomTat`, `Title`, `Des`, `Keyword` 
 		FROM `loai` 
-		WHERE Parent = 0 AND AnHien = 1
+		WHERE Parent = 0 AND AnHien = 1 AND Menu = 1
 		";
 
 		$result = mysqli_query($this->conn, $query);

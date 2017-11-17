@@ -1,4 +1,4 @@
-<form action="" method="post" enctype="multipart/form-data" name="form1" id="form1">
+<form action="index.php?nameCtr=NewsController&action=handleAddTopic" method="post" enctype="multipart/form-data" name="form1" id="form1">
 <table border="1" align="center" cellpadding="4" cellspacing="0" class="khungk">
 <tr> <td colspan="2" align="center">Thêm Chủ Đề Tin Tức</td> </tr>
 
@@ -6,7 +6,7 @@
      <td><input type="text" name="TieuDe" id="TieuDe" /></td>
 </tr>
 <tr>
-	<td>Mô Tả Chức</td>
+	<td>Mô Tả Chủ Đề</td>
 	<td><label>
        <textarea name="TomTat" id="TomTat" cols="45" rows="5"></textarea>
      </label>
