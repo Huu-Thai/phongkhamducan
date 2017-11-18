@@ -60,7 +60,7 @@ Examples:
 
 ATTENTION: The trailing slash is required.
 */
-$baseUrl = '';
+$baseUrl = 'http://localhost/phongkhamducan/';
 
 /*
 $baseDir : the path to the local directory (in the server) which points to the
@@ -79,7 +79,8 @@ Examples:
 
 ATTENTION: The trailing slash is required.
 */
-$baseDir = resolveUrl($baseUrl);
+// $baseDir = resolveUrl($baseUrl);
+$baseDir = $_SERVER['DOCUMENT_ROOT'].'/upload/';
 
 /*
  * ### Advanced Settings
@@ -194,7 +195,7 @@ $config['DefaultResourceTypes'] = '';
 
 $config['ResourceType'][] = Array(
 		'name' => 'Files',				// Single quotes not allowed
-		'url' => $baseUrl . 'files',
+		'url' => $baseUrl . 'upload/files',
 		'directory' => $baseDir . 'files',
 		'maxSize' => 0,
 		'allowedExtensions' => '7z,aiff,asf,avi,bmp,csv,doc,docx,fla,flv,gif,gz,gzip,jpeg,jpg,mid,mov,mp3,mp4,mpc,mpeg,mpg,ods,odt,pdf,png,ppt,pptx,pxd,qt,ram,rar,rm,rmi,rmvb,rtf,sdc,sitd,swf,sxc,sxw,tar,tgz,tif,tiff,txt,vsd,wav,wma,wmv,xls,xlsx,zip',
@@ -202,7 +203,7 @@ $config['ResourceType'][] = Array(
 
 $config['ResourceType'][] = Array(
 		'name' => 'Images',
-		'url' => $baseUrl . 'images',
+		'url' => $baseUrl . 'upload/images',
 		'directory' => $baseDir . 'images',
 		'maxSize' => 0,
 		'allowedExtensions' => 'bmp,gif,jpeg,jpg,png',
@@ -210,7 +211,7 @@ $config['ResourceType'][] = Array(
 
 $config['ResourceType'][] = Array(
 		'name' => 'Flash',
-		'url' => $baseUrl . 'flash',
+		'url' => $baseUrl . 'upload/flash',
 		'directory' => $baseDir . 'flash',
 		'maxSize' => 0,
 		'allowedExtensions' => 'swf,flv',

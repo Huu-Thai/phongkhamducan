@@ -1,4 +1,11 @@
-<form action="index.php?nameCtr=NewsController&action=handleAddNews" method="post" enctype="multipart/form-data">
+<script>
+  $(document).ready(function(){
+    $("#form1").submit(function(){
+      if($("#Parent").val()==0){ alert('chưa nhập loại'); return false;}
+    });
+  });
+</script>
+<form id="form1" name="form1" action="index.php?nameCtr=NewsController&action=handleAddNews" method="post" enctype="multipart/form-data">
   <table border="1" align="center" cellpadding="4" cellspacing="0" class="khungk">
     <tr> <td colspan="2" align="center">THÊM TIN TỨC BỆNH MỚI</td> </tr>
 

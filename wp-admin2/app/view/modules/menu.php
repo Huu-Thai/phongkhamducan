@@ -46,10 +46,10 @@
 			<ul class="sub-menu">
 				<li>
 
-					<a href=""><em>01</em>Item 1</a>
+					<a href=index.php?nameCtr=NewsController&action=showNews><em>01</em>Tất cả tin tức</a>
 				</li>
 				<li>
-					<a href="index.php?nameCtr=NewsController&action=addNews"><em>01</em>Thêm tin tức</a>
+					<a href="index.php?nameCtr=NewsController&action=addNews"><em>02</em>Thêm tin tức</a>
 				</li>
 			</ul>
 		</li>

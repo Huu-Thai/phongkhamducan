@@ -9,7 +9,28 @@ class NewsController extends Controller {
 		}
 	}
 
-	function addTopic(){
+	public function showNews(){
+		$news = new News();
+
+		$pageSize = 20;
+		$pageNum = 1;
+
+		if (isset($_GET['pageNum']) == true) 
+			$pageNum = (int)$_GET['pageNum'];
+
+		if ($pageNum <= 0) 
+			$pageNum = 1; 
+
+		$TieuDe = $_GET['TieuDe'];
+		$TieuDe = $news->deleteFormat($TieuDe);
+
+		$data['news'] = $news->getAllNews($totalRow, $pageNum, $pageSize, $TieuDe);
+		$data['totalRow'] = $totalRow;
+
+		$this->view('show-news', $data);
+	}
+
+	public function addTopic(){
 		$category = new Category();
 		$data['category'] = $category->getCategory();
 
@@ -47,9 +68,10 @@ class NewsController extends Controller {
 
 	public function handleAddNews(){
 		$category = new Category();
+		$news = new News();
 		$this->getLink();
 
-		if(isset($_POST['btnOK'])){
+		if(isset($_POST['btnOK']) == true && $_POST['idLoai'] != 0){
 
 			$parentId = $category->findParentId($_POST['idLoai']);
 
@@ -76,23 +98,23 @@ class NewsController extends Controller {
 			}
 
 
-			$data['TieuDe'] = $category->deleteFormat($_POST['TieuDe']);
+			$data['TieuDe'] = str_replace(['-',':','|'],'',$category->deleteFormat($_POST['TieuDe']));
 			$data['TieuDeKD'] = $category->stripUnicode($data['TieuDe']);
-			$data['UrlHinh'] = str_replace('images', 'upload', $category->deleteFormat($_POST['UrlHinh']));
-			$data['TomTat'] = $category->deleteFormat($_POST['TomTat']);
-			$data['NoiDung'] = $category->deleteFormat($_POST['NoiDung']);
-			$data['Title'] = $category->deleteFormat($_POST['Title']);
+			$data['UrlHinh'] = $category->deleteFormat($_POST['UrlHinh']);
+			$data['TomTat'] = $_POST['TomTat'];
+			$data['NoiDung'] = $_POST['NoiDung'];
+			$data['Title'] = str_replace(['-',':','|'],'',$category->deleteFormat($_POST['Title']));
 			$data['Des'] = $category->deleteFormat($_POST['Des']);
 			$data['Keyword'] = $category->deleteFormat($_POST['Keyword']);
 			
-			if($category->store($data) != false){
+			if($insertId = ($news->store($data) != false)){
 
+				$news->updateTieuDeKD($insertId, $data['TieuDeKD']);
 				$_SESSION['script'] = "alert('Thêm thành công')";
 				header("location:".$_SESSION['oldLink']);
 			}else{
 
-				$_SESSION['script'] = "alert('Thêm loại tin xãy ra lỗi')";
-				header("location:".$_SESSION['oldLink']);
+				die(mysqli_error());
 			}
 		}
 	}

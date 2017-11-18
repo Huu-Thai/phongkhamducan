@@ -72,8 +72,7 @@ abstract class DB {
 		return mysqli_real_escape_string($this->conn, $string);
 	}
 
-	function stripUnicode($str)
-	{
+	function stripUnicode($str){
 		$str = str_replace(array(',', '<', '>', '&', '{', '}', '*', '?', '/', '"'), array(' '), $str);
 		$str = mb_convert_case($str, MB_CASE_LOWER, "UTF-8");
 		if(!$str) return false;
@@ -107,6 +106,64 @@ abstract class DB {
 			$str = str_replace(" ","-",$str);
 		}
 		return $str;
+	}
+
+	function cutString($string, $size, $type = '...'){
+
+		$string = trim($string);
+		$strlen = strlen($string);
+
+		$str = substr($string, $size, 20);
+		$arr = explode(' ', $str);
+		$a = strlen($arr[0]);
+
+		$sub = substr($string, 0, $size + $a);
+		if($strlen - $size > 0)
+			$sub .= $type;
+		
+		return $sub;
+	}
+
+	function pageList($totalRow , $pageNum = 1, $pageSize = 5, $offset = 5){
+		$baseUrl = $_SERVER['PHP_SELF'];
+		parse_str($_SERVER['QUERY_STRING'], $arr);
+
+		foreach($arr as $key => $value){
+			$str .= "$key=$value";
+		}
+		$baseUrl .= $str;
+
+		if($totalRow <= 0){
+			return '';
+		}
+		$totalPage = ceil($totalRow/$pageSize);
+
+		if($totalPage <= 1){
+			return '';
+		}
+
+		$firstLink="";  $prevLink="";  $lastLink="";  $nextLink="";
+		if($pageNum > 1){
+			$firstLink = "<a href='$baseURL'><img src='img/phantrang_first.png' width=16px height=16px /></a>";
+			$prevPage = $pageNum - 1;
+			$prevLink="<a href='$baseURL&pageNum=$prevPage'><img src='img/phantrang_previous.png' width=16px height=16px /></a>";
+		}
+
+		$from = $pageNum - $offset;
+		$to = $pageNum + $offset;
+		if($from <= 0 ){
+			$from = 1;
+			$to = $offset*2;
+		}
+		if($to > $totalPage){
+
+			$to = $totalPage;
+		}
+		$link = '';
+
+		for($j = $from; $j <= $to; $j++){
+			
+		}
 	}
 
 }
