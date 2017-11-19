@@ -33,6 +33,16 @@ class Category extends DB {
 		return $this->result($query);
 	}
 
+	public function getTieuDe($childId){
+
+		$result = $this->getParentId($childId);
+		if($result != false){
+
+			return mysqli_fetch_assoc($result)['TieuDe'];
+		}
+		
+	}
+
 	// tìm đệ quy lên
 	function findRecursive($childId){
 
@@ -54,5 +64,42 @@ class Category extends DB {
 			return mysqli_fetch_assoc($result)['Parent'];
 		}
 		return 0;
+	}
+
+	function getAllCategory(&$totalRow, $pageNum, $pageSize, $TieuDe, $idCha =-1){
+		$startRow = ($pageNum-1)*$pageSize;
+
+			if ($TieuDe != ""){
+				$query ="SELECT idLoai, TieuDe, AnHien, Parent, Menu, Home, ThuTu
+				FROM  $this->table
+				WHERE ($idCha = -1 OR Parent = $idCha ) and TieuDe like '%$TieuDe%'
+				ORDER BY $this->primayKey DESC
+				LIMIT $startRow , $pageSize
+					";
+
+				$result = $this->result($query) or die (mysqli_error($this->conn));
+				$sql="SELECT count(*)
+	    				FROM  $this->table
+	    				WHERE ($idCha = -1 OR Parent = $idCha ) and TieuDe like '%$TieuDe%'
+					";
+			}else{
+
+				$query ="SELECT idLoai, TieuDe, AnHien, Parent, Menu, Home, ThuTu
+				FROM  $this->table
+				WHERE ($idCha = -1 OR Parent = $idCha ) 
+				ORDER BY idLoai DESC
+				LIMIT $startRow , $pageSize
+				";
+
+				$result = $this->result($query) or die (mysqli_error($this->conn));
+
+				$query = "SELECT count(*) FROM  $this->table WHERE ($idCha = -1 OR Parent = $idCha )";
+
+			}
+
+			$rs = $this->result($query) or die(mysqli_error($this->conn));
+			$totalRow = mysqli_fetch_row($rs)[0];
+
+			return $result;
 	}
 }

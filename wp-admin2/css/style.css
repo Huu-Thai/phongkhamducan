@@ -218,7 +218,7 @@ section.content nav.content-left .menu-left .menu-item, section.content nav.cont
         color: #7979f2; }
 
 section.content {
-  height: 90%;
+  height: 100%;
   clear: both;
   min-height: 450px; }
   section.content nav.content-left {
@@ -254,7 +254,7 @@ section.content {
             top: 0;
             left: 0;
             content: '';
-            background-image: url(../images/img/icons.png);
+            background-image: url(../img/icons.png);
             background-repeat: no-repeat;
             background-position: 0px 0px;
             display: inline-block;

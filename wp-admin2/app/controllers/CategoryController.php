@@ -9,6 +9,31 @@ class CategoryController extends Controller {
 		}
 	}
 
+	public function showCategory(){
+		$category = new Category();
+
+		$data['pageSize'] = 20;
+		$pageNum = 1;
+
+		if (isset($_GET['pageNum']) == true) 
+			$pageNum = (int)$_GET['pageNum'];
+
+		if ($pageNum <= 0) 
+			$pageNum = 1; 
+
+		$TieuDe = isset($_GET['TieuDe']) ? $_GET['TieuDe'] : '';
+		$TieuDe = $category->deleteFormat($TieuDe);
+
+		$idCha = -1;
+		if (isset($_GET['idCha']) == true) $idCha = $_GET['idCha'];
+
+		$data['category'] = $category->getAllCategory($totalRow, $pageNum, $data['pageSize'], $TieuDe, $idCha);
+		$data['totalRow'] = $totalRow;
+		$data['pageNum'] = $pageNum;
+
+		$this->view('show-category', $data);
+	}
+
 	public function addCate(){
 		$category = new Category();
 
@@ -63,15 +88,17 @@ class CategoryController extends Controller {
 			$data['Des'] = $category->deleteFormat($_POST['Des']);
 			$data['Keyword'] = $category->deleteFormat($_POST['Keyword']);
 			
-			if($category->addpage($data) != false){
+			$NgayDang = gmdate('Y/m/d H:i:s', time() + 7*3600);
 
-				$_SESSION['script'] = "alert('Thêm thành công')";
-				header("location:".$_SESSION['oldLink']);
-			}else{
 
-				$_SESSION['script'] = "alert('Thêm loại tin xãy ra lỗi')";
-				header("location:".$_SESSION['oldLink']);
-			}
+
+			//Chèn dữ liệu vào database
+
+			$query = "INSERT INTO pages (TieuDe, TieuDeKD, NoiDung, Des, idGroup, NgayDang, Title, Keyword,UrlHinh,TomTat)
+
+			VALUES ('$TieuDe', '$TieuDeKD', '$NoiDung', '$Des', $idGroup , '$NgayDang', '$Title', '$Keyword', '$UrlHinh', '$TomTat')";
+
+			$category->insert($query) or die (mysql_error($category->conn));
 		}
 	}
 

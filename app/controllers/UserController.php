@@ -3,9 +3,7 @@
  class UserController extends Controller {
 
  	function register() {
- 		if(isset($_SESSION['linkCurrent']))
-			$_SESSION['linkOld'] = $_SESSION['linkCurrent'];
-		$_SESSION['linkCurrent'] = (isset($_SERVER['HTTPS']) ? 'https' : 'http')."://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+ 		$this->getLink();
 		
  		$user = new User();
  		if(isset($_POST['btnRegister'])){

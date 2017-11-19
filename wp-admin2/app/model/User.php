@@ -35,14 +35,14 @@ class User extends DB {
 
 		$query = "UPDATE $this->table SET Pass = '$pass' WHERE idUser = $idUser";
 
-		return $this->alterColumn($query);
+		return $this->execute($query);
 
 	}
 	function changeTask($idUser, $idGroup){
 
 		$query = "UPDATE $this->table SET idGroup = $idGroup WHERE idUser = $idUser";
 
-		return $this->alterColumn($query);
+		return $this->execute($query);
 
 	}
 
@@ -50,7 +50,7 @@ class User extends DB {
 
 		$query = "DELETE  FROM $this->table WHERE idUser = $idUser";
 
-		return $this->alterColumn($query);
+		return $this->execute($query);
 	}
 
 	function search($keyword){

@@ -10,9 +10,9 @@ class Controller  {
 		
 	function view($page, $data = []){
 		$news = new News();
-		$_SESSION['currentLink'] = (isset($_SERVER['https']) ? 'https' : 'http')."://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-	
 		$category = new Category();
+
+		$_SESSION['currentLink'] = (isset($_SERVER['https']) ? 'https' : 'http')."://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 		if(isset($_SESSION['user']))
 			require_once "app/view/master.php";
