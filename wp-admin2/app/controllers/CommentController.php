@@ -15,4 +15,5 @@ class CommentController extends Controller {
 
 		$this->view('browse-comment', $data);
 	}
+
 }

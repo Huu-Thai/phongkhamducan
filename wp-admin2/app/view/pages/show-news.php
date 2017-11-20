@@ -5,11 +5,10 @@
     $(".anhien").click(function() {
 
       var bien = $(this).attr('AnHien');
-
       var ma = $(this).attr('id');
 
       $.get('index.php?nameCtr=NewsController&action=changeAnHien', bien, function(data) {
-console.log(data);
+
         var chuoi = "<img  src=images/ah_"+data+".png>";
 
         $("#"+ma).html(chuoi);
@@ -64,7 +63,7 @@ console.log(data);
 			<td>{TieuDe}</td>
 			<td><img src="{UrlHinh}" width="70" height="70"></td>
 			<td>{TomTat}</td>
-			<td class="anhien"><a class="smallButton anhien" id="ma_{idTT}"  AnHien="table=tintuc&ma=idTT&id={idTT}"  href="javascript:void(0)"><img  src="images/ah_{AnHien}.png"></a></td>
+			<td class="anhien"><a class="smallButton anhien" id="ma_{idTT}"  AnHien="table=tintuc&ma=idTT&id={idTT}&col=AnHien"  href="javascript:void(0)"><img  src="images/ah_{AnHien}.png"></a></td>
 			<td align="center">
 				<a class="smallButton" href="index.php?nameCtr=NewsController&action=updateNews&id={idTT}"><img  src="images/pencil.png" title="Sửa Tin"></a>
 				<a class="smallButton" href="index.php?nameCtr=NewsController&action=deleteNews&id={idTT}" onclick="return confirm('Bạn có muốn xóa !!! ');"><img src="images/close.png" title="Xóa Tin"></a>

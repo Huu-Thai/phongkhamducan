@@ -13,6 +13,8 @@ require_once $adminModel."Category.php";
 require_once $adminModel."News.php";
 require_once $adminModel."User.php";
 require_once $adminModel."Comment.php";
+require_once $adminModel."Phone.php";
+require_once $adminModel."Banner.php";
 
 require_once $adminControllers.'Controller.php';
 require_once $adminControllers."HomeController.php";
@@ -20,6 +22,8 @@ require_once $adminControllers."CategoryController.php";
 require_once $adminControllers."NewsController.php";
 require_once $adminControllers.'UserController.php';
 require_once $adminControllers.'CommentController.php';
+require_once $adminControllers."PhoneController.php";
+require_once $adminControllers."InterfaceController.php";
 
 $nameCtr = 'HomeController';
 $action = 'index';

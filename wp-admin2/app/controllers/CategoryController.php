@@ -24,12 +24,14 @@ class CategoryController extends Controller {
 		$TieuDe = isset($_GET['TieuDe']) ? $_GET['TieuDe'] : '';
 		$TieuDe = $category->deleteFormat($TieuDe);
 
-		$idCha = -1;
-		if (isset($_GET['idCha']) == true) $idCha = $_GET['idCha'];
+		$data['idCha'] = -1;
+		if (isset($_GET['idCha']) == true) $data['idCha'] = $_GET['idCha'];
 
-		$data['category'] = $category->getAllCategory($totalRow, $pageNum, $data['pageSize'], $TieuDe, $idCha);
+		$data['category'] = $category->getAllCategory($totalRow, $pageNum, $data['pageSize'], $TieuDe, $data['idCha']);
 		$data['totalRow'] = $totalRow;
 		$data['pageNum'] = $pageNum;
+
+		$data['cateParent'] = $category->getCategory();
 
 		$this->view('show-category', $data);
 	}
@@ -105,6 +107,68 @@ class CategoryController extends Controller {
 	public function addMenu(){
 
 		$this->view('add-menu');
+	}
+
+	public function changeAnHien(){
+		$category = new Category();
+		$table = $_GET['table'];
+		$ma = $_GET['ma'];
+		$id = $_GET['id'];
+		$col = $_GET['col'];
+
+		echo $category->changeAnHien($table, $ma, $id, $col);
+	}
+
+	public function editIndex(){
+		$category = new Category();
+		$table = $_GET['table'];
+		$ttu =$_GET['ttu'];
+		$id =$_GET['id'];
+
+		echo $category->editIndex($table, $id, $ttu);
+	}
+
+	public function updateCategory(){
+		$category = new Category();
+
+		$data['idLoai'] = $_GET['id'];
+		$data['cateById'] = $category->findId($data['idLoai']);
+		$data['category'] = $category->getCategory();
+
+		$this->view('edit-category', $data);
+	}
+
+	public function handelUpdatecate(){
+		$category = new Category();
+
+		if(isset($_POST['btnOK'])){
+			$TieuDe= $_POST['TieuDe'];
+			$UrlHinh= $_POST['UrlHinh'];
+			$Title= $_POST['Title'];
+			$Des= $_POST['Des'];
+			$data['Parent'] = (int)$_POST['Parent'];
+			$Keyword= $_POST['Keyword'];
+			$data['TomTat'] = $_POST['TomTat'];
+
+			$data['idLoai'] = (int)$_POST['idLoai'];
+			$data['TieuDe'] = $category->deleteFormat($TieuDe);
+			$data['UrlHinh'] = $category->deleteFormat($UrlHinh);
+			$data['Title'] = $category->deleteFormat($Title);
+			$data['Keyword'] = $category->deleteFormat($Keyword);
+			$data['Des'] = $category->deleteFormat($Des);
+			$data['TieuDeKD'] = $category->stripUnicode($TieuDe);
+
+			if($category->update($data) != false){
+
+				$category->updateTieuDeKD($data['idLoai'], $data['TieuDeKD']);
+				$_SESSION['script'] = "alert('Update thành công')";
+				header("location:index.php?nameCtr=CategoryController&action=showCategory");
+			}else{
+
+				die(mysqli_error($category->conn));
+			}
+
+		}
 	}
 
 

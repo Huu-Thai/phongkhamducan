@@ -32,12 +32,6 @@ class NewsController extends Controller {
 		$this->view('show-news', $data);
 	}
 
-	public function showNews2(){
-		$news = new News();
-		$data['news'] = $news->getAllnews2();
-		$this->view('show-news', $data);
-	}
-
 	public function addTopic(){
 		$category = new Category();
 		$data['category'] = $category->getCategory();
@@ -206,7 +200,8 @@ class NewsController extends Controller {
 		$table = $_GET['table'];
 		$ma = $_GET['ma'];
 		$id = $_GET['id'];
+		$col = $_GET['col'];
 
-		echo $news->changeAnHien($table, $ma, $id);
+		echo $news->changeAnHien($table, $ma, $id, $col);
 	}
 }

@@ -2,13 +2,28 @@
 
 class Category extends DB {
 	protected $table = 'loai';
-	protected $primayKey = 'idLoai';
+	protected $primaryKey = 'idLoai';
 
 	function store($data){
 		
 		$query = "INSERT INTO $this->table(`TieuDe`, `TieuDeKD`, `UrlHinh`, `TomTat`, `Title`, `Des`, `Keyword`, `Parent`, `AnHien`, `Menu`, `Home`, `ThuTu`) VALUES ('$data[TieuDe]', '$data[TieuDeKD]', '$data[UrlHinh]', '$data[TomTat]', '$data[Title]', '$data[Des]', '$data[Keyword]', $data[Parent], 0, 0, 1, 99)";
 
 		return $this->insert($query);
+	}
+
+	function update($data){
+		$query = "UPDATE $this->table
+		SET TieuDe = '$data[TieuDe]',
+		UrlHinh = '$data[UrlHinh]',
+		TomTat = '$data[TomTat]',
+		Title = '$data[Title]',
+		Des = '$data[Des]',
+		Parent = '$data[Parent]',
+		Keyword = '$data[Keyword]',
+		TieuDeKD = '$data[TieuDeKD]'
+		WHERE $this->primaryKey = $data[idLoai]
+		";
+		return $this->execute($query) or die(mysqli_error($this->conn));
 	}
 
 	function getCategory(){
@@ -69,37 +84,47 @@ class Category extends DB {
 	function getAllCategory(&$totalRow, $pageNum, $pageSize, $TieuDe, $idCha =-1){
 		$startRow = ($pageNum-1)*$pageSize;
 
-			if ($TieuDe != ""){
-				$query ="SELECT idLoai, TieuDe, AnHien, Parent, Menu, Home, ThuTu
-				FROM  $this->table
-				WHERE ($idCha = -1 OR Parent = $idCha ) and TieuDe like '%$TieuDe%'
-				ORDER BY $this->primayKey DESC
-				LIMIT $startRow , $pageSize
-					";
+		if ($TieuDe != ""){
+			$query ="SELECT idLoai, TieuDe, AnHien, Parent, Menu, Home, ThuTu
+			FROM  $this->table
+			WHERE ($idCha = -1 OR Parent = $idCha ) and TieuDe like '%$TieuDe%'
+			ORDER BY $this->primaryKey DESC
+			LIMIT $startRow , $pageSize
+			";
 
-				$result = $this->result($query) or die (mysqli_error($this->conn));
-				$sql="SELECT count(*)
-	    				FROM  $this->table
-	    				WHERE ($idCha = -1 OR Parent = $idCha ) and TieuDe like '%$TieuDe%'
-					";
-			}else{
+			$result = $this->result($query) or die (mysqli_error($this->conn));
+			$query = "SELECT count(*)
+			FROM  $this->table
+			WHERE ($idCha = -1 OR Parent = $idCha ) and TieuDe like '%$TieuDe%'
+			";
+		}else{
 
-				$query ="SELECT idLoai, TieuDe, AnHien, Parent, Menu, Home, ThuTu
-				FROM  $this->table
-				WHERE ($idCha = -1 OR Parent = $idCha ) 
-				ORDER BY idLoai DESC
-				LIMIT $startRow , $pageSize
-				";
+			$query ="SELECT idLoai, TieuDe, AnHien, Parent, Menu, Home, ThuTu
+			FROM  $this->table
+			WHERE ($idCha = -1 OR Parent = $idCha ) 
+			ORDER BY idLoai DESC
+			LIMIT $startRow , $pageSize
+			";
 
-				$result = $this->result($query) or die (mysqli_error($this->conn));
+			$result = $this->result($query) or die (mysqli_error($this->conn));
 
-				$query = "SELECT count(*) FROM  $this->table WHERE ($idCha = -1 OR Parent = $idCha )";
+			$query = "SELECT count(*) FROM  $this->table WHERE ($idCha = -1 OR Parent = $idCha )";
 
-			}
+		}
 
-			$rs = $this->result($query) or die(mysqli_error($this->conn));
-			$totalRow = mysqli_fetch_row($rs)[0];
+		$rs = $this->result($query) or die(mysqli_error($this->conn));
+		$totalRow = mysqli_fetch_row($rs)[0];
 
-			return $result;
+		return $result;
 	}
+
+	public function editIndex($table, $id, $doi){
+
+		$query = "UPDATE $table SET ThuTu = $doi WHERE $this->primaryKey = $id";
+
+		return $this->execute($query) or die(mysqli_error($this->conn));
+
+	}
+
+
 }

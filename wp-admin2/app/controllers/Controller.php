@@ -11,6 +11,7 @@ class Controller  {
 	function view($page, $data = []){
 		$news = new News();
 		$category = new Category();
+		$phone = new Phone();
 
 		$_SESSION['currentLink'] = (isset($_SERVER['https']) ? 'https' : 'http')."://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 

@@ -176,34 +176,43 @@ abstract class DB {
 		return $firstLink.$prevLink.$links.$nextLink.$lastLink;
 	}
 
-	public function checKAnHien($table, $ma, $id){
+	public function checKAnHien($table, $ma, $id, $col){
 
-		$query = "SELECT AnHien FROM $table WHERE $ma = $id";
+		$query = "SELECT $col FROM $table WHERE $ma = $id";
 
 		$result = $this->result($query);
 		if($result != false)
-			return mysqli_fetch_assoc($result)['AnHien'];
+			return mysqli_fetch_assoc($result)[$col];
 
 	}
 
-	public function updateAnHien($table, $ma, $id, $AnHien){
+	public function updateAnHien($table, $ma, $id, $AnHien, $col){
 
-		$query = "UPDATE $table SET AnHien = $AnHien WHERE $ma = $id";
+		$query = "UPDATE $table SET $col = $AnHien WHERE $ma = $id";
 
 		return $this->execute($query);
 	}
 
-	public function changeAnHien($table, $ma, $id){
+	public function changeAnHien($table, $ma, $id, $col){
 
-		if($this->checKAnHien($table, $ma, $id) == 0){
+		if($this->checKAnHien($table, $ma, $id, $col) == 0){
 
-			$this->updateAnHien($table, $ma, $id, 1);
+			$this->updateAnHien($table, $ma, $id, 1, $col);
 			return 1;
 		}else{
 
-			$this->updateAnHien($table, $ma, $id, 0);
+			$this->updateAnHien($table, $ma, $id, 0, $col);
 			return 0;
 		}
+	}
+
+	function updateTieuDeKD($id, $TieuDeKD){
+
+		$TieuDeKD = $TieuDeKD.'-'.$id;
+
+		$query ="UPDATE $this->table SET TieuDeKD = '$TieuDeKD' WHERE $this->primaryKey = $id";
+
+		return $this->execute($query);
 	}
 
 }

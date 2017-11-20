@@ -26,7 +26,7 @@
 			</ul>
 		</li>
 		<li id="3" class='menu-item'>
-			<a href="javscript:void(0)">Quản Lý Pages</a>
+			<a href="javscript:void(0)">Pages</a>
 			<ul class="sub-menu">
 				<li>
 
@@ -49,7 +49,7 @@
 			</ul>
 		</li>
 		<li id="5" class='menu-item'>
-			<a href="javascript:void(0)">Quản Lý Tin Tức</a>
+			<a href="javascript:void(0)">Tin Tức</a>
 			<ul class="sub-menu">
 				<li>
 
@@ -57,17 +57,6 @@
 				</li>
 				<li>
 					<a href="index.php?nameCtr=NewsController&action=addNews"><em>02</em>Thêm tin tức</a>
-				</li>
-			</ul>
-		</li>
-		<li id="6" class='menu-item'>
-			<a href="javascript:void(0)">Quản Danh Mục</a>
-			<ul class="sub-menu">
-				<li>
-					<a href=""><em>02</em>Tất cả danh mục</a>
-				</li>
-				<li>
-					<a href="index.php?nameCtr=CategoryController&action=addMenu"><em>02</em>Thêm danh mục</a>
 				</li>
 			</ul>
 		</li>
@@ -83,7 +72,7 @@
 			<a href="javascript:void(0)">Slider</a>
 			<ul class="sub-menu">
 				<li>
-					<a href="index.php?nameCtr=UserController&action=getAllUser"><em>01</em>Tất cả silder</a>
+					<a href="index.php?nameCtr=InterfaceController&action=showSlider"><em>01</em>Tất cả silder</a>
 				</li>
 				<li>
 					<a href="index.php?nameCtr=UserController&action=addUser"><em>02</em>Thêm slider</a>
@@ -94,7 +83,7 @@
 			<a href="javascript:void(0)">Đăng ký</a>
 			<ul class="sub-menu">
 				<li>
-					<a href="index.php?nameCtr=UserController&action=getAllUser"><em>01</em>Tất cả đăng ký</a>
+					<a href="index.php?nameCtr=PhoneController&action=showPhone"><em>01</em>Tất cả đăng ký</a>
 				</li>
 			</ul>
 		</li>
@@ -107,12 +96,8 @@
 			</ul>
 		</li>
 		<li id="11" class='menu-item'>
-			<a href="javascript:void(0)">Quản Lý Bình Luận</a>
+			<a href="javascript:void(0)">Bình Luận</a>
 			<ul class="sub-menu">
-				<li>
-
-					<a href=""><em>01</em>Item 1</a>
-				</li>
 				<li>
 					<a href="index.php?nameCtr=CommentController&action=browseComment"><em>01</em>Duyệt bình luận</a>
 				</li>

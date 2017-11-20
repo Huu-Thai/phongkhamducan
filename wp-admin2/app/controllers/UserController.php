@@ -145,4 +145,5 @@ class UserController extends Controller {
 			header('location:'.$_SESSION['oldLink']);
 		}
 	}
+
 }

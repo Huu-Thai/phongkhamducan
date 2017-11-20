@@ -80,13 +80,4 @@ class News extends DB {
 		return $this->result($query);
 	}
 
-	function updateTieuDeKD($idTT, $TieuDeKD){
-
-		$TieuDeKD = $TieuDeKD.'-'.$idTT;
-
-		$query ="UPDATE $this->table SET TieuDeKD = '$TieuDeKD' WHERE idTT = $idTT";
-
-		return $this->execute($query);
-	}
-
 }
