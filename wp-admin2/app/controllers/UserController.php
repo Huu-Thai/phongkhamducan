@@ -72,9 +72,24 @@ class UserController extends Controller {
 		}
 	}
 
-	public function getAllUser(){
+	public function showUser(){
 		$user = new User();
-		$data['users'] = $user->getAllUser();
+
+		$data['pageSize'] = 20; 
+		$pageNum = 1;
+
+		if (isset($_GET['pageNum']) == true) $pageNum = $_GET['pageNum'];
+
+		if ($pageNum <= 0) $pageNum = 1; settype($pageNum, "int");
+
+		$TieuDe = '';
+		if(isset($_GET['TieuDe'])){
+			$TieuDe = $_GET['TieuDe'];
+		}
+		$TieuDe = $user->deleteFormat($TieuDe);
+		$data['users'] = $user->getAllUser($totalRow, $pageNum, $data['pageSize'], $TieuDe);
+		$data['totalRow'] = $totalRow;
+		$data['pageNum'] = $pageNum;
 
 		$this->view('show-user', $data);
 	}

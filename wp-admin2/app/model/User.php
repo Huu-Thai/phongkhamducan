@@ -8,7 +8,7 @@ class User extends DB {
 	function store ($user, $pass, $idGroup){
 
 		$query = "INSERT INTO `users`(`idUser`, `User`, `Pass`, `idGroup`) 
-				VALUES (null, '$user', '$pass', $idGroup)";
+		VALUES (null, '$user', '$pass', $idGroup)";
 
 		return $this->insert($query);
 	}
@@ -20,15 +20,40 @@ class User extends DB {
 		return $this->result($query);
 	}
 
-	function getAllUser(){
+	public function getAllUser(&$totalRow, $pageNum, $pageSize, $TieuDe){
 
-		$query = "SELECT u.idUser, u.User, gu.task
-				FROM $this->table AS u
-				INNER JOIN group_users AS gu
-				ON gu.id = u.idGroup
-				";
+		$startRow = ($pageNum-1)*$pageSize;
 
-		return $this->result($query);
+		if ($TieuDe != ""){
+			$query = "SELECT u.idUser, u.User, gu.task
+			FROM  $this->table AS u
+			INNER JOIN group_users AS gu
+			ON gu.id = u.idGroup
+			WHERE User like '%$TieuDe%'
+			ORDER BY idUser DESC
+			LIMIT $startRow , $pageSize
+			";
+			$result = $this->result($query);
+			$query = "SELECT count(*)
+			FROM  $this->table
+			WHERE User like '%$TieuDe%'
+			";
+		}else{
+			$query = "SELECT u.idUser, u.User, gu.task
+			FROM  $this->table AS u
+			INNER JOIN group_users AS gu
+			ON gu.id = u.idGroup
+			ORDER BY idUser DESC
+			LIMIT $startRow , $pageSize
+			";
+			$result = $this->result($query);
+			$query = "SELECT count(*) FROM  $this->table";
+		}
+
+		$rs = $this->result($query);
+		$totalRow = mysqli_fetch_row($rs)[0];
+		
+		return $result;
 	}
 
 	function changePass($idUser, $pass){
@@ -63,7 +88,7 @@ class User extends DB {
 	function countIdGroup(){
 
 		$query = "SELECT count(id) as numGroup FROM group_users
-				";
+		";
 		$result = $this->result($query);
 		if($result != false){
 			return mysqli_fetch_assoc($result)['numGroup'];

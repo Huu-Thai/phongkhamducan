@@ -107,7 +107,7 @@
 			<a href="javascript:void(0)">Tài Khoản</a>
 			<ul class="sub-menu">
 				<li>
-					<a href="index.php?nameCtr=UserController&action=getAllUser"><em>01</em>Thông tin user</a>
+					<a href="index.php?nameCtr=UserController&action=showUser"><em>01</em>Tất cả userr</a>
 				</li>
 				<li>
 					<a href="index.php?nameCtr=UserController&action=addUser"><em>02</em>Thêm user</a>
