@@ -64,7 +64,7 @@
 			<a href="javascript:void(0)">Câu Hỏi</a>
 			<ul class="sub-menu">
 				<li>
-					<a href="index.php?nameCtr=UserController&action=getAllUser"><em>01</em>Tất cả câu hỏi</a>
+					<a href="#"><em>01</em>Tất cả câu hỏi</a>
 				</li>
 			</ul>
 		</li>
@@ -91,27 +91,35 @@
 			<a href="javascript:void(0)">Góp ý</a>
 			<ul class="sub-menu">
 				<li>
-					<a href="index.php?nameCtr=UserController&action=getAllUser"><em>01</em>Tát cả góp ý</a>
+					<a href="#"><em>01</em>Tát cả góp ý</a>
 				</li>
 			</ul>
 		</li>
-		<li id="11" class='menu-item'>
-			<a href="javascript:void(0)">Bình Luận</a>
-			<ul class="sub-menu">
-				<li>
-					<a href="index.php?nameCtr=CommentController&action=browseComment"><em>01</em>Duyệt bình luận</a>
-				</li>
-			</ul>
-		</li>
+		<?php if($_SESSION['user']['level'] == 3): ?>
+			<li id="11" class='menu-item'>
+				<a href="javascript:void(0)">Bình Luận</a>
+				<ul class="sub-menu">
+					<li>
+					<a href="index.php?nameCtr=CommentController&action=showComment"><em>01</em>Duyệt bình luận</a>
+					</li>
+				</ul>
+			</li>
+		<?php endif; ?>
 		<li id="12" class='menu-item'>
 			<a href="javascript:void(0)">Tài Khoản</a>
 			<ul class="sub-menu">
-				<li>
-					<a href="index.php?nameCtr=UserController&action=showUser"><em>01</em>Tất cả userr</a>
-				</li>
-				<li>
-					<a href="index.php?nameCtr=UserController&action=addUser"><em>02</em>Thêm user</a>
-				</li>
+				<?php if(isset($_SESSION['user']) && $_SESSION['user']['level'] == 3): ?>
+					<li>
+						<a href="index.php?nameCtr=UserController&action=showUser"><em>01</em>Tất cả user</a>
+					</li>
+					<li>
+						<a href="index.php?nameCtr=UserController&action=addUser"><em>02</em>Thêm user</a>
+					</li>
+				<?php else: ?>
+					<li>
+						<a href="index.php?nameCtr=UserController&action=showChangePass"><em>01</em>Đổi mật khẩu</a>
+					</li>
+				<?php endif; ?>
 			</ul>
 		</li>
 		
@@ -144,8 +152,6 @@
 			$(".menu-item  a").removeClass('active');
 			$("#"+ parentId + " > a").addClass('active');
 			$("#"+ parentId + " .sub-menu").slideDown('normal');
-			
 		}
-
 	});
 </script>

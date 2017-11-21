@@ -11,6 +11,7 @@
 	<meta http-equiv="Content-Type", type="text/html" charset="utf-8" />
 	<title>ProAdmin</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/paginate.css">
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery.cookie.js"></script>
 	<script type="text/javascript" src="ckeditor/ckeditor.js"></script>

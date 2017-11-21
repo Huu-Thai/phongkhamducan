@@ -98,32 +98,3 @@
 	</tr>
 <?php endif; ?>
 </table>
-<style>
-
-#thanhphantrang a {
-	text-decoration:none; 
-	padding-left:5px; 
-	padding-right:5px; 
-	margin-left:5px;
-	margin-right:5px;
-}
-
-#thanhphantrang span {
-  padding-left:5px;
-  padding-right:5px;
-  margin-left:5px;
-  margin-right:5px;
-  color:#F00;
-  font-size: 24px;
-  font-weight: bolder;
-}
-
-.smallButton{
-  border: 1px solid #cdcdcd;
-  padding: 5px 5px;
-  display: inline-block;
-  background: #f6f6f6;
-  margin:0 10px 0 0;
-}
-
-</style>

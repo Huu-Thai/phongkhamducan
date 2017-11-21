@@ -15,7 +15,13 @@ class User extends DB {
 
 	function checkUser($user, $pass){
 
-		$query = "SELECT idUser FROM $this->table WHERE BINARY `User` = BINARY '$user' AND BINARY `Pass` = BINARY  '$pass'";
+		$query = "SELECT idUser, idGroup FROM $this->table WHERE BINARY `User` = BINARY '$user' AND BINARY `Pass` = BINARY  '$pass'";
+
+		return $this->result($query);
+	}
+
+	function checkPass($idUser, $pass){
+		$query = "SELECT idUser FROM $this->table WHERE BINARY `idUser` = BINARY $idUser AND BINARY `Pass` = BINARY  '$pass'";
 
 		return $this->result($query);
 	}

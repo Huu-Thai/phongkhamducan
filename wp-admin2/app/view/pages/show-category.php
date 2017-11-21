@@ -1,4 +1,4 @@
-<select onchange="window.location='index.php?nameCtr=CategoryController&action=showCategory&idCha='+this.value">
+<select class="choose_cate" onchange="window.location='index.php?nameCtr=CategoryController&action=showCategory&idCha='+this.value">
   <option value="-1" <?php if($data['idCha'] == -1) echo "selected";?>>Chọn chuyên khoa</option>
 
   <?php if($data['cateParent'] != false): ?>
@@ -93,7 +93,7 @@
 <form action="" method="get" name="form2" id="form2">
  <input type="hidden" name="nameCtr" id="" value="categoryController" />
  <input type="hidden" name="action" id="" value="showCategory" />
- <input type="text" id="TieuDe" name="TieuDe" value="Nhập tiêu đề cần tìm" onclick="nhapchuot()" />
+ <input type="text" id="TieuDe" name="TieuDe" placeholder="Nhập tiêu đề cần tìm" onclick="nhapchuot()" />
  <input type="submit" value="Tìm" id="btnLocMa" name="btnLocMa" />
 </form>
 
@@ -167,28 +167,22 @@
 </table>
 
 <style>
-
-  #thanhphantrang a {text-decoration:none; padding-left:5px; padding-right:5px; margin-left:5px; margin-right:5px;}
-  #thanhphantrang span {
-    padding-left:5px;
-    padding-right:5px;
-    margin-left:5px;
-    margin-right:5px;
-    color:#F00;
-    font-size: 24px;
-    font-weight: bolder;
+  
+  .choose_cate {
+    margin-right: 10px;
   }
-  .smallButton{
-    border: 1px solid #cdcdcd;
-    padding: 5px 5px;
-    display: inline-block;
-    background: #f6f6f6;
-    margin:0 10px 0 0;
+  .choose_cate, #form2 #TieuDe{
+    width: 30%;
   }
-
-  input[type="text"].ThuTu {
-    width: 50px;
-    text-align: center;
+  .choose_cate, #form2 input{
+    padding: 3px 10px;
+    float: left;
+  }
+  #btnLocMa {
+    margin-left: 10px;
+    background: #fff;
+    border: 1px solid #DDD;
+    box-shadow: 0 0 0 2px #f4f4f4;
   }
 
 </style>

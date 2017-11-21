@@ -1,0 +1,114 @@
+@mixin col-md($width, $float, $box_sizing) {
+	width: $width;
+	float: $float;
+	box-sizing: $box_sizing;
+}
+.col-1{@include col-md(10%, left, border-box);}
+.col-2{@include col-md(20%, left, border-box);}
+.col-3{@include col-md(30%, left, border-box);}
+.col-4{@include col-md(40%, left, border-box);}
+.col-5{@include col-md(50%, left, border-box);}
+.col-6{@include col-md(60%, left, border-box);}
+.col-7{@include col-md(70%, left, border-box);}
+.col-8{@include col-md(80%, left, border-box);}
+.col-9{@include col-md(90%, left, border-box);}
+.col-10{@include col-md(100%, left, border-box);}
+
+/*divide 12 column*/
+.col-md-1{@include col-md(8.33%, left, border-box);}
+.col-md-2{@include col-md(16.66%, left, border-box);}
+.col-md-3{@include col-md(24.99%, left, border-box);}
+.col-md-4{@include col-md(33.32%, left, border-box);}
+.col-md-5{@include col-md(41.65%, left, border-box);}
+.col-md-6{@include col-md(49.98%, left, border-box);}
+.col-md-7{@include col-md(58.31%, left, border-box);}
+.col-md-8{@include col-md(66.64%, left, border-box);}
+.col-md-9{@include col-md(74.97%, left, border-box);}
+.col-md-10{@include col-md(83.33%, left, border-box);}
+.col-md-11{@include col-md(91.66%, left, border-box);}
+.col-md-12{@include col-md(100%, left, border-box);}
+
+@mixin background_gradient_linear($color_start, $color_end){
+	background: $color_start;
+	background: linear-gradient(top,$color_start 0%, $color_end 100%);
+	background: -webkit-linear-gradient(top,$color_start 0%, $color_end 100%);
+	background: -moz-linear-gradient(top,$color_start 0%, $color_end 100%);
+}
+@mixin float-side($float){
+	float: $float;
+}
+.clearfix{
+	clear: both;
+	content:'';
+}
+* {
+	font-family: arial, sans-serif;
+	font-size: 15px;
+	box-sizing: border-box;
+}
+body, html{
+	width: 100%;
+	box-sizing:border-box;
+}
+
+#wrapper {
+	width: 100%;
+	min-width: 1000px;
+	box-sizing: border-box;
+}
+.w1000 {
+	max-width: 1000px;
+	box-sizing: border-box;
+	margin: 0 auto;
+}
+#header {
+	width: 100%;
+
+	.header-top{
+		width: 100%;
+		background: #535353;
+		height: 40px;
+		box-sizing: border-box;
+	}
+	.header-top-left{
+		@include float-side(left);
+
+		box-sizing: border-box;
+		margin-top: -5px;
+		position: relative;
+		// line-height: 40px;
+		img {
+			position: absolute;
+			top: 10px;
+			left:0;
+		}
+		span {
+			// margin-left: 20px;
+			// margin-top: 20px;
+			color: #fff;
+		}
+	}
+	.header-top-right{
+		@include float-side(right);
+
+		ul{
+			list-style: none;
+			li{
+				margin-right: 10px;
+				width: 24px;
+				height: 24px;
+				float: right;
+			}
+			.social-fb{
+				background-image: url('../images/icon-facebook.png');
+
+			}
+			.social-tw{
+				background-image: url('../images/icon-googleplus.png');
+			}
+			.social-gg{
+				background-image: url('../images/icon-twitter.png');
+			}
+		}
+	}
+}

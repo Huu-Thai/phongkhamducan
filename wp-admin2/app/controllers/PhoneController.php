@@ -24,4 +24,23 @@ class PhoneController extends Controller {
 
 		$this->view('show-phone', $data);
 	}
+
+	function editPhone(){
+		
+		$this->view('edit-phone');
+	}
+
+	function handleEditPhone(){
+		$phone = new Phone();
+		$this->getLink();
+
+		if (isset($_POST['btnOK']) == true){
+			$id_sdt = $_POST['id_sdt'];
+			$Ghichu = $_POST['Ghichu'];
+
+			$phone->editPhone($id_sdt, $Ghichu);
+
+			header("location:index.php?nameCtr=PhoneController&action=showPhone");
+		}
+	}
 }

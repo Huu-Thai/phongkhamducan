@@ -12,6 +12,7 @@ class Controller  {
 		$news = new News();
 		$category = new Category();
 		$phone = new Phone();
+		$comment = new Comment();
 
 		$_SESSION['currentLink'] = (isset($_SERVER['https']) ? 'https' : 'http')."://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 

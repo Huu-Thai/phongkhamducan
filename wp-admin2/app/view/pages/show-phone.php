@@ -24,7 +24,6 @@
 <table id="dsloaitin" border="1" cellpadding="4" cellspacing="0" width="100%" align="center" />
 
 <tr>
-
   <th width="50">Mã</th>
   <th >Ngày Giờ DK</th>
   <th width="150">Điện Thoại</th>
@@ -45,8 +44,8 @@
       <td style="overflow:scroll;">{linkweb}</td>
       <td>{IP}</td>        
       <td>{ghichu}</td>
-      <td width="100" align="center"
-      <a class="smallButton" href="main.php?p=dk_chinh&id={id}"><img src="images/pencil.png" title="Ghi chú"></a>            
+      <td width="100" align="center">
+      <a class="smallButton" href="index.php?nameCtr=PhoneController&action=editPhone&id={id}"><img src="images/pencil.png" title="Ghi chú"></a>            
     </td>
   </tr>
 
@@ -130,44 +129,3 @@
 
 <?php endif; ?>
 
-<style>
-
-  #thanhphantrang a {text-decoration:none; padding-left:5px; padding-right:5px; margin-left:5px; margin-right:5px;}
-
-  #thanhphantrang span {
-
-    padding-left:5px;
-
-    padding-right:5px;
-
-    margin-left:5px;
-
-    margin-right:5px;
-
-    color:#F00;
-
-    font-size: 24px;
-
-    font-weight: bolder;
-
-  }
-
-  .smallButton{
-
-    border: 1px solid #cdcdcd;
-
-    padding: 5px 5px;
-
-    display: inline-block;
-
-    background: #f6f6f6;
-
-    margin:0 10px 0 0;
-
-  }
-
-  table { table-layout:fixed; }
-
-  table tr { height:1em;  }
-
-</style>

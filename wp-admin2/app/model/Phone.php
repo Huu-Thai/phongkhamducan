@@ -34,4 +34,14 @@ class Phone extends DB {
 		return $result;
 
 	}
+
+	public function editPhone($idSDT){
+
+		$Ghichu = $_POST['Ghichu'];
+
+			//chèn vào db
+		$query = "UPDATE $this->table SET Ghichu = '$Ghichu' WHERE $this->primaryKey = $idSDT";
+		
+		return $this->execute($query);
+	}
 }
